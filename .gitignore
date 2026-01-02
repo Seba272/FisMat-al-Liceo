@@ -1,0 +1,14 @@
+*.orig
+*.aux
+*.log
+*.pdf
+*.synctex.gz
+*.bbl
+*.blg
+*.out
+*.toc
+*.xml
+*.bib
+!BIB*.bib
+.DS_Store
+.gittex
