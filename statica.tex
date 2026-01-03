@@ -1,0 +1,376 @@
+% !TEX encoding = UTF-8 Unicode
+%!TEX root = FisMat.tex
+
+\section{Statica}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Introduzione}
+Ci occuperemo di studiare sistemi fermi.
+Per ``sistemi'' intendiamo gruppi di oggetti, come per esempio un candelabro appeso tramite una carrucola e controbilanciato da una molla.
+Se un sistema è fermo, significa che è in equilibrio -- per definizione di \emph{equilibrio}.
+Vogliamo trovare le condizioni che rendono equilibrato un sistema.
+
+%\emph{equilibrio del punto materiale e del corpo rigido}.
+
+Il nostro metodo di osservazione sarà il seguente:
+\begin{enumerate}
+\item	Facciamo un \emph{diagramma delle forze}, ossia un disegno del sistema con dei vettori applicati che rappresentano le forze esterne.
+	A questo punto dovremo usare immaginazione e accettare un certo grado di incertezza.
+\item	Per ciascun oggetto del sistema, studiamo le forze che agiscono su di esso e applichiamo le leggi di equilibrio del punto materiale e del corpo rigido.
+\item	A questo punto abbiamo tutti gli elementi per dedurre ogni proprietà di equilibrio del sistema.
+\end{enumerate}
+Messo così, questo piano di lavoro è astratto, ma lo terremo come vademecum.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{La forza}
+La \emph{forza} è una grandezza fisica vettoriale che non si vede, ma ha effetti visibili (questa non è una definizione).
+La sua unità di misura è il \emph{Newton} che si denota con $\unit{N}$.
+In relazione alle unità di misura fondamentali, dobbiamo ricordarci che:
+\begin{equation}
+	\unit{N} = \unit[per-mode = symbol]{\kilogram\,\metre\per\second^2}
+\end{equation}
+
+Esempi di forza: 
+\begin{itemize}[leftmargin=*]
+\item	Il \emph{peso} è una forza. 
+	Noi sperimentiamo il peso costantemente sul pianeta Terra: esso è la conseguenza della nostra relazione con la Terra, che ci attrae ad essa e noi attraiamo la Terra a noi.
+	Quando ci pesiamo sulla bilancia, esprimiamo questa misura in chilogrammi: tecnicamente, stiamo sbagliando. 
+	Il chilogrammo $\unit{kg}$ è l'unità di misura della massa.
+	Quindi se dico ``Io peso 70 chilogrammi'', dovrei invece dire ``Io ho una massa di 70 chilogrammi'', oppure ``Io peso $686{,}7$ Newton''.
+	Nella vita quotidiana non è un problema, perché peso e massa sono direttamente proporzionali e questa proporzionalità non cambia mai:
+	\begin{equation}
+		\text{Peso}_{\text{sulla Terra}} = g \cdot \text{Massa},
+	\end{equation}
+	dove $g$ è l'accelerazione di gravità, 
+	\begin{equation}
+		g = 9{,}81\,\unit[per-mode = symbol]{\metre\per\second^2} .
+	\end{equation}
+\item	La Luna gira attorno alla Terra, come se Terra e Luna si tenessero per mano.
+	Cosa le tiene assieme? 
+	La stessa forza di gravità che tiene noi per terra.
+	Che i fatti celesti siano soggetti alle stesse leggi dei fatti terrestri è una importante intuizione della fisica.
+	La \emph{Legge di gravitazione universale}\footnote{La legge di gravitazione universale fu formulata da Isaac Newton nel 1687} afferma che due corpi di massa $M$ e $m$, rispettivamente, si attraggono con una forza
+	\begin{equation}
+		\vec F = G \frac{ M \cdot m}{r^2} ,
+	\end{equation}
+	dove $r$ è la distanza tra i (centri di massa dei) due corpi e $G$ è la \emph{costante gravitazionale universale}
+	\begin{equation}
+		G = 6{,}67\times 10^{-11}\ \unit{ \frac{ Nm^2 }{ kg^2 }} .
+	\end{equation}
+\item	Se schiacciamo o tiriamo una molla, la molla ci restituisce una forza, detta \emph{forza elastica}.
+\item	Se una palla ci colpisce, la botta che percepiamo è una forza.
+	Siccome però è una forza intensa che dura poco, quella nostra esperienza è meglio descritta dall'\emph{impulso}, che vedremo tra poco.
+\item	Quando avviciniamo due magneti, l'attrazione o la repulsione tra loro è una forza, chiamata \emph{forza magnetica}.
+\item	Se strofiniamo un maglione di lana e lo avviciniamo a dei pezzetti di carta, questi verranno attratti dal maglione e ci rimarranno attaccati.
+	Anche questa attrazione è una forza: la \emph{forza elettrostatica}.
+\item	Se proviamo a trascinare un oggetto pesante (per esempio una lavatrice), faremo un certo grado di fatica.
+	Se però mettiamo l'oggetto su un carrellino munito di ruote, riusciremo a trascinare lo stesso oggetto con grande facilità.
+	Senza carrellino, la \emph{forza di attrito} si opponeva al moto e noi dovevamo vincerla. 
+	Con il carrellino, la forza di attrito è diminuita enormemente.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Equilibrio del punto materiale}
+Un \emph{punto materiale} è un punto adimensionale, ossia senza dimensioni spaziali, che ha una sua posizione e una sua massa.
+
+Un punto materiale è in \emph{equilibrio}, se e solo se la somma di tutte le forze agenti su di esso è zero.
+
+Un punto materiale è un'astrazione: non esiste un oggetto che non occupi un volume.
+Però, ci sono situazioni in cui non importa il volume di un oggetto.
+Per esempio, se studiamo il moto dei pianeti attorno al sole, non è importante che dimensioni abbiano e possiamo riassumere l'intero pianeta Terra, con tutti i casini che accadono su di essa, a un punto infinitesimo di massa $M_T = 5{,}972 \times 10^{24} \ \unit{kg}$.
+
+%immaginiamo che un oggetto sia riassunto in un punto adimensionale (ossia che non occupa volume) che ha una sua posizione e una sua massa.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Equilibrio del corpo rigido}
+Un \emph{corpo rigido} è un oggetto che ha una massa e una forma rigida, ossia che non cambia.
+
+Un corpo rigido è in \emph{equilibrio} se e solo se
+\begin{enumerate}
+\item	la somma di tutte le forze agenti su di esso è zero, e 
+\item	la somma di tutti i momenti delle forze agenti su di esso rispetto ad un punto è zero.
+\end{enumerate}
+
+Anche il corpo rigido è un'astrazione, perché nella realtà gli oggetti cambiano forma quando sottoposti a delle forze.
+In molti casi però tale deformazione è talmente piccola da potersi trascurare.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esempio di un sistema in equilibrio}
+Consideriamo un lampadario di massa $m=3\unit{kg}$ appeso al soffitto.
+Vogliamo sapere quale forza agisce sul soffitto.
+
+Per prima cosa, facciamo un diagramma delle forze:
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-01}
+\end{center}
+Sappiamo che il peso del lampadario è $P=gm$, dove $g$ è l'accelerazione di gravità,
+e sappiamo che il peso del lampadario punta verso il basso.
+Così abbiamo il peso come vettore $\vec P$.
+
+In questo diagramma ci sono tre oggetti: il lampadario, il cavo che tiene il lampadario e il soffitto.
+Guardiamo un oggetto alla volta.
+
+Primo, il lampadario è fermo, quindi in equilibrio.
+Questo significa che la somma delle forze che agiscono sul lampadario deve essere zero.
+Quindi c'è una forza che bilancia la forza peso: ovviamente è la tensione $\vec T$ del cavo che tiene il lampadario:
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-02}
+\end{center}
+Ricapitolando, siccome la somma delle forze che agiscono sul lampadario deve essere zero, abbiamo 
+\begin{equation}
+	\vec P + \vec T = 0 ,
+\end{equation}
+ossia $\vec T = - \vec P$.
+Così, la tensione sul cavo è $T=P=gm$ ed è opposta alla forza peso, ossia verso l'alto.
+
+Secondo, il cavo che tiene il lampadario è fermo, quindi la somma delle forze che agiscono su di esso deve essere zero.
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-03}
+\end{center}
+Ho disegnato due forze sul cavo: una forza $\vec T_g$ ad un capo del cavo, e una forza $\vec T_s$ all'altro capo del cavo.
+Siccome la somma è zero, dobbiamo avere 
+\begin{equation}
+	\vec T_g+\vec T_s = 0 ,
+\end{equation}
+ossia $\vec T_s = -\vec T_g$.
+
+Naturalmente, $\vec T_g = -\vec T$.
+Per questo motivo, abbiamo
+\begin{equation}
+	\vec T_s = -\vec T_g = -(-\vec T) = \vec T = -\vec P .
+\end{equation}
+
+Infine, chiamo $\vec F$ la forza che agisce sul soffitto:
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-04}
+\end{center}
+Naturalmente, $\vec F = - \vec T_s$, e quindi $\vec F = \vec P$.
+
+Concludiamo che la forza che agisce sul soffitto ha modulo $gm$ e punta verso il basso.
+
+NB! 
+Il soffitto è in equilibrio, però in questo problema non siamo interessati alle sue condizioni di equilibrio.
+
+Questo esercizio può sembrare pedante, ma vuole mostrare come si propagano le forze grazie ai principi di equilibrio del corpo rigido.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{La Legge di Hooke}
+La {Legge di Hooke} descrive la forza impressa da una molla quando compressa o allungata.
+Quando una molla è a riposo ha una sua lunghezza.
+Se allungata o compressa, denotiamo con $\Delta x$ la differenza rispetto alla lunghezza a riposo.
+Per distinguere se questo scarto è di allungamento o compressione, definiamo il vettore $\Delta\vec x$ come il vettore che ha coda nel punto di riposo della molla e punta nella posizione attuale della molla:
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-05}
+\end{center}
+
+La \emph{legge di Hooke} afferma che la \emph{forza elastica} $\vec F$ impressa dalla molla è
+\begin{equation}
+	\vec F = - k \Delta\vec x ,
+\end{equation}
+dove $k$ è la \emph{costante elastica} della molla.
+
+La costante elastica dipende dalla molla e va misurata sperimentalmente.
+L'unità di misura della costante elastica è $\unit{\frac{N}{m}}$.
+Così, una molla con costante elastica $1\unit{N\per m}$ da una forza di un Newton per ogni metro di compressione (o allungamento).
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-06}
+\end{center}
+
+NB!
+La legge di Hooke vale solo se lo spostamento $\Delta x$ è piccolo abbastanza: 
+se si allunga o contrae la molla troppo, questa subisce altri fenomeni di deformazione e quindi la legge di Hooke non vale più.
+Per esempio, se si tira troppo la molla si rompe e quindi non esercita più alcuna forza.
+
+NB!
+Una molla esercita una forza su entrambi gli estremi, con la medesima intensità (ossia modulo), medesima direzione, ma verso opposto.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-06-1}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Una molla di costante elastica $k=34\unit{N/m}$ e di lunghezza a riposo $\ell=45\unit{cm}$ è dentro una scatola lunga $30\unit{cm}$.
+Quali sono le forze impresse dalla molla sulle due pareti della scatola?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Nei seguenti disegni, sono rappresentate delle molle sia a riposo che sotto sforzo.
+Nelle immagini delle molle sotto sforzo, disegna gli scarti $\Delta \vec x$ e le forze elastiche $\vec F$ date dalla legge di Hooke.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-07}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-08}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-09}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Appendo un corpo di massa $m=13\unit{g}$ a una molla con costante elastica $k=50\unit{N/m}$.
+La molla a riposo è lunga $\ell = 7\unit{cm}$.
+Quanto è lunga la molla quando il corpo è appeso?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}\label{par6958e97f}
+Lucia e Marco hanno costruito una bilancia casalinga.
+Hanno messo una molla in verticale (un tubo la tiene dritta).
+In basso la molla appoggia al tavolo, in alto invece c'è una piano su cui appoggiare gli oggetti da pesare.
+
+Lucia e Marco devono innanzitutto calcolare la costante elastica della molla.
+Come fanno? 
+Prova a rispondere prima di continuare a leggere.
+
+\begin{center}
+\includegraphics[width=.45\textwidth]{pics/statica-10}
+\includegraphics[width=.45\textwidth]{pics/statica-11}
+\end{center}
+
+Sì, fanno così: ci appoggiano sopra un corpo di massa $m=100\unit{g}$ e misurano quanto la molla si contrae.
+La loro misura da $\Delta x = 1\unit{cm}$.
+Quanto vale la costante elastica $k$ della molla?
+
+A questo punto possono provare a pesare un libro di massa $M$ (sconosciuta).
+Lo appoggiano sulla bilancia e misurano che la molla si contrae di $3{,}4\unit{cm}$.
+Quanto pesa il libro? Quanto vale $M$?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Esercizio}
+%Due molle sono messe dentro a una scatola.
+%Hanno costanti elastiche $k_1$ e $k_2$, rispettivamente, e lunghezze a riposo $\ell_1$ e $\ell_2$.
+%La scatola è lunga $L$ e larga $H$.
+%
+%Possiamo mettere le due molle in due modi: in serie per il lungo o in parallelo per il largo.
+%
+%Se le mettiamo in serie per il lungo, quanto quali forze esercitano le molle sulle pareti della scatola?
+%E se le mettiamo in parallelo per il largo?
+
+% e supponiamo che $L<\ell_1 + \ell_2$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Due molle identiche sono messe dentro a una scatola.
+La loro costante elastica è $k$ e la loro lunghezza a riposo è $\ell$.
+La scatola è lunga $L$ e larga $H$.
+
+Possiamo mettere le due molle in due modi: in serie per il lungo o in parallelo per il largo.
+Se le mettiamo in serie per il lungo, quanto quali forze esercitano le molle sulle pareti della scatola?
+E se le mettiamo in parallelo per il largo?
+
+\begin{center}
+\includegraphics[width=.8\textwidth]{pics/statica-12}
+\end{center}
+
+Se preferisci avere dei numeri, considera $k=60\unit{N/m}$, $\ell = 10\unit{cm}$,
+$L=15\unit{cm}$, $H=8\unit{cm}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Torniamo alla bilancia descritta in~\ref{par6958e97f}.
+Tra Lucia e Marco nasce una diatriba.
+Lucia sostiene che dentro al tubo ci siano due molle, una sopra l'altra, identiche tra loro.
+Marco invece sostiene che ci sia una sola molla.
+Se avesse ragione Lucia, quale sarebbe la costante elastica delle due molle?
+
+C'è un modo, senza aprire il tubo che contiene le molle, di verificare chi dei due ha ragione?\footnote{La risposta è no. Questo è un esempio in cui possiamo fare modelli diversi per la stessa situazione pratica.
+In altre parole, possiamo immaginare che dentro al tubo ci siano una o due molle (con lunghezze e costanti elastiche appropriate), e comunque dare le stesse previsioni corrette.
+Se non possiamo aprire il tubo, non sapremo mai quante molle ci sono dentro.
+Anzi, magari non c'è nemmeno una molla, ma un sofisticato meccanismo elettromagnetico.
+}
+
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-13}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio ($\star$)}
+Abbiamo due molle di costante elastiche $k_1$ e $k_2$, rispettivamente, e lunghezze a riposo $\ell_1$ e $\ell_2$.
+Vengono messe in serie, una dopo l'altra, in una scatola di lunghezza totale $L$.
+Supponiamo $L<\ell_1+\ell_2$ (quindi le molle sono compresse).
+Nella scatola, misuriamo che la prima molla è ora lunga $x_1$ e la seconda molla è lunga $x_2$.
+Ovviamente, $x_1+x_2 = L$.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-14}
+\end{center}
+
+\begin{enumerate}
+\item	(Poco facile) 
+	Quanto valgono $x_1$ e $x_2$ in termini dei dati sulle molle e $L$?
+	(Se vuoi numeri: $k_1 = 10\unit{N/m}$, $k_2 = 25\unit{N/m}$, $\ell_1=34\unit{cm}$, $\ell_2=23\unit{cm}$, $L=49\unit{cm}$)
+\item	(Meno difficile)
+	Per semplificare, supponi $k_1=k_2=k$ e $\ell_1=\ell_2=\ell$. 
+	Quanto valgono $x_1$ e $x_2$?
+	(Se vuoi numeri: $k = 15\unit{N/m}$, $\ell=20\unit{cm}$, $L=32\unit{cm}$)
+\item	(Meno difficile, ma poco facile)
+	Supponi $k_2 = 2k_1$ e $\ell_2=\ell_1$.
+	Quanto valgono $x_1$ e $x_2$?
+	(Se vuoi numeri: $k_1 = 16\unit{N/m}$, $\ell_1=19\unit{cm}$, $L=53\unit{cm}$)
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio ($\star\star$)}
+Un lampadario è appeso al soffitto con due molle messe a triangolo.
+Le molle sono identiche, con costante elastica $k$ e lunghezza a riposo $\ell$.
+Il triangolo formato dalle molle ha base $L$ (lungo il soffitto) e altezza $h$.
+Al vertice opposto al soffitto è appeso il lampadario, di peso $P$.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-15}
+\end{center}
+
+\begin{enumerate}
+\item
+	Queste cinque quantità $k$, $\ell$, $L$, $h$ e $P$,
+	sono in relazione tra loro.
+	Scrivere una formula che le mette in relazione.
+	(Con questa formula, potrai rispondere velocemente a tutte le domande seguenti).
+\item	
+	Dati $k=125\unit{N/m}$, $\ell=1\unit{m}$, $L=1\unit{m}$, $h=1\unit{m}$,
+	quanto vale $P$?
+\item
+	Dati $k=125\unit{N/m}$, $\ell=1\unit{m}$, $L=1\unit{m}$, $P=20\unit{N}$, quanto vale $h$?
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Due molle di costante elastica $k_1$ e $k_2$ rispettivamente, e di lunghezze a riposo $\ell_1$ e $\ell_2$, rispettivamente, sono appese dopo l'altra al soffitto, in serie.
+Alla seconda molla, più in basso, viene agganciata una massa $m$.
+Quanto saranno lunghe le due molle?
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-16}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Esercizio}
+%Due molle di costante elastica $k_1$ e $k_2$ rispettivamente, e di lunghezze a riposo $\ell_1$ e $\ell_2$, rispettivamente, sono appese a fianco l'altra al soffitto, in parallelo.
+%Viene agganciata una massa $m$ alle due
+%Quanto saranno lunghe le due molle?
+%
+%\begin{center}
+%\includegraphics[width=.75\textwidth]{pics/statica-16}
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Inventa tu un esercizio e risolvilo.
+
+
+
+
+
+
+

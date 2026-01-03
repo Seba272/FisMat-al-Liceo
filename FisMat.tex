@@ -3,6 +3,9 @@
 \usepackage[italian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+%\usepackage{cmbright}
+%\usepackage[sfdefault]{carlito}
+%\setmainfont{calibri}
 %For Japanese kanji and kana: but Typeset with XeLaTeX !
 %\usepackage{xeCJK}
 %\setCJKmainfont{MS Mincho} % for \rmfamily
@@ -57,6 +60,8 @@ urlcolor=Black}
 %\usepackage{refcheck} % Mostra i label non usati ``Unused label...'' nel log file. See https://tex.stackexchange.com/questions/209782/get-list-of-unused-labels
 \usepackage[normalem]{ulem} % for strikeout: \sout{striketouted} (preferable over 'soul')
 %\usepackage{soul} % for strikeout: \st{striketouted} (see 'ulem' package, which is preferable)
+\usepackage{siunitx} % For SI units
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % COMANDI
@@ -188,6 +193,8 @@ urlcolor=Black}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{vettori}
+\newpage
+\input{statica}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
