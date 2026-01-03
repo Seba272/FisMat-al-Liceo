@@ -1,0 +1,284 @@
+% !TEX encoding = UTF-8 Unicode
+%!TEX root = FisMat.tex
+
+\section{I vettori}
+I vettori sembrano sconvolgere le studentesse e gli studenti a tal punto che qualcuno vuole smettere di studiare matematica e fisica.
+Prima di fare scelte drastiche di cui potreste pentirvi in futuro, dovete leggere questa frase:
+{\it un vettore è una freccia.}
+
+Mi direte che la sto facendo troppo facile, ma fidatevi. 
+I vettori sono frecce, e noi li useremo come tali.
+Nelle prossime pagine cercheremo esaminare attentamente i vettori, introdurremo un gergo tecnico appropriato, ma non ci allontaneremmo dal concetto di freccia.
+Questo lavoro serve solo ad affinare la nostra consapevolezza sulle frecce: adesso un vettore è solo una freccia, ma per la fine di questo modulo i vettori saranno frecce -- consapevolmente.
+
+Questi sono dei vettori:
+
+\usetikzlibrary{arrows.meta}
+\tikzset{>=Latex} % Set tip of arrows as black triangle
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{center}
+\begin{tikzpicture}
+	\draw[->] (0,0) -- (0,2);
+	\draw[->] (0,0) -- (1,3);
+	\draw[->] (4,2) -- (2,1);
+	\draw[->] (4,1) -- (5,3);
+\end{tikzpicture}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Il vettore}
+Un \emph{vettore}, in quanto freccia, porta con se tre informazioni:
+\begin{enumerate}
+\item	La \emph{direzione}, ossia la retta su cui giace la freccia. Attenzione, due rette parallele sono la stessa direzione.
+\item	Il \emph{verso}: data la retta, il vettore (la freccia) può puntare in due direzioni opposte -- di là o di qua.
+\item	Il \emph{modulo}, ossia la lunghezza del vettore. Il modulo di un vettore $v$ si denota con $\norm{v}$.
+\end{enumerate}
+
+Un vettore, in quanto freccia, ha due punti speciali:
+\begin{enumerate}
+\item	la \emph{coda} è il punto da cui il vettore parte,
+\item	la \emph{punta} è dove il vettore arriva.
+\end{enumerate}
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/vettori-01}
+%\begin{tikzpicture}
+%	\draw[->] (0,0) -- (5,0);
+%	\draw[decorate, decoration={brace, amplitude=10pt, raise=5pt, mirror}] 
+%    (0,0) -- (5,0) 
+%    node[midway, below=15pt] {modulo};
+%\end{tikzpicture}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}\label{par6957d6fa}
+Tra i seguenti vettori:
+\begin{itemize}
+\item	quali hanno la stessa direzione?
+\item	quali hanno la stessa direzione e lo stesso verso?
+\item	quali hanno lo stesso modulo?
+\end{itemize}
+
+Quindi, quali delle seguenti frecce sono lo stesso vettore?
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/vettori-02}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Usanze di nome}
+Se dobbiamo dare un nome a un vettore, possiamo usare una lettera qualunque, come $v$, $w$ oppure $z$, perché non siamo in dittatura quindi è nostro dovere perseguire la chiarezza, non la uniformità dei costumi.
+È costume mettere una freccina sopra il nome di un vettore per indicare che stiamo parlando di un vettore.
+Per esempio, $\vec v$, $\vec w$ e $\vec z$.
+Questo costume risulta particolarmente utile se vogliamo parlare del modulo di un vettore senza usare le barrette: così, il modulo di $\vec v$ viene indicato con $v$ (senza freccina):
+\begin{equation}
+	\norm{\vec v} = v .
+\end{equation}
+
+Questa usanza è tipica in fisica, ma meno in matematica.
+Io cercherò di adottarla il più possibile, anche se sono un matematico.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Il vettore applicato}
+Un \emph{vettore applicato} contiene una informazione in più: dove sta la coda, ossia il \emph{punto di applicazione}.
+Così, nell'esercizio~\ref{par6957d6fa} abbiamo visto che lo stesso vettore può comparire in posti diversi del foglio.
+Un vettore applicato sta invece in un punto preciso.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Abbiamo tre vettori, che chiamiamo $\vec v$, $\vec w$ e $\vec z$, e due punti che chiamiamo $P$ e $Q$.
+Disegna i vettori applicati $(\vec v,P)$, $(\vec w,Q)$, e $(\vec v,Q)$.
+In altre parole, applica il vettore $\vec v$ al punto $P$, il vettore $\vec w$ al punto $Q$ e il vettore $\vec v$ al punto $Q$.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/vettori-03}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Somma di vettori}\label{par6957e2da}
+I vettori si possono sommare con il così detto metodo del ``punto-coda''.
+Quindi, se abbiamo due vettori $\vec v$ e $\vec w$, la somma $\vec v+\vec w$ è un vettore ottenuto così:
+\begin{enumerate}
+\item	si fissa un punto e si applica $\vec v$ a questo punto;
+\item 	si applica $\vec w$ alla punta di $\vec v$;
+\item 	il vettore $\vec v+\vec w$ è il vettore con la coda nella coda di $\vec v$ e la punta nella punta di $\vec w$.
+\end{enumerate}
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/vettori-04}
+\end{center}
+
+Si noti che $\vec v+\vec w$ e $\vec w+\vec v$ sono uguali!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Disegnare dei vettori e farne la somma.
+Disegnare quattro vettori $\vec v_1$, $\vec v_2$, $\vec v_3$ e $\vec v_4$ e fare la somma $\vec v_1+\vec v_2+\vec v_3+\vec v_4$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Moltiplicazione di un vettore per uno scalare}\label{par6957e5e4}
+La parola ``\emph{scalare}'' è un sinonimo di ``numero'' nel gergo dei vettori.
+Possiamo moltiplicare un vettore $\vec v$ per un numero reale qualunque $t\in\R$.
+
+Per esempio, $2\vec v$ è $\vec v+\vec v$, e $3\vec v=\vec v+\vec v+\vec v$, mentre $\frac12\vec v$ è metà di $\vec v$.
+
+Quindi, dati un vettore $\vec v$ e uno scalare $t\in\R$, costruiamo il vettore $t\vec v$ così:
+\begin{enumerate}
+\item	$t\vec v$ ha la stessa direzione di $\vec v$;
+\item	se $t=0$, $t\vec v$ è un punto; se $t>0$, $t\vec v$ ha lo stesso verso di $\vec v$; se $t<0$, $t\vec v$ ha verso opposto di $\vec v$;
+\item	$t\vec v$ ha modulo $|t|\cdot\norm{\vec v}$.
+\end{enumerate}
+
+
+In particolare, $-\vec v$ è il vettore ``opposto'' a $\vec v$.
+Giustamente, $\vec v+(-\vec v) = 0$.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/vettori-05}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Disegnare tre vettori, scegliere tre numeri, e fare almeno tre moltiplicazioni scalare per vettore.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Vettori nel piano cartesiano}\label{par6957e126}
+Possiamo descrivere ciascun vettore nel piano cartesiano usando due numeri, chiamati \emph{coordinate del vettore}:
+\begin{enumerate}
+\item	Applichiamo il vettore all'origine, ossia mettiamo la coda del vettore nel punto $(0,0)$;
+\item	I due numeri che descrivono il vettore sono le coordinate (ascissa e ordinata) della punta del vettore.
+\end{enumerate}
+
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/vettori-06}
+\end{center}
+
+Se il vettore è applicato altrove, questi due numeri comunque determinano, data la coda del vettore, dove cadrà la punta del vettore.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/vettori-07}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}\label{par6957e1d8}
+Disegna i vettori con le seguenti coordinate:
+$\vec v=(1,1)$, $\vec w=(0,3)$, $\vec u=(2,-1)$, $\vec k=(-1,-1)$.
+
+Poi, disegna tu tre vettori e determinane le coordinate.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Coordinate di un vettore applicato}
+Questo concetto lo abbiamo già visto in~\ref{par6957e126}, ma vale la pena sottolinearlo.
+
+Un vettore nel piano cartesiano è determinato da due numeri, le sue due coordinate.
+Un vettore applicato nel piano cartesiano ha bisogno del doppio di coordinate: due coordinate del vettore e due coordinate per il suo punto di applicazione.
+
+Domanda: dato un vettore $\vec v=(a,b)$ applicato nel punto $(x,y)$, la sua coda è nel punto $(x,y)$ per definizione, ma dove sta la sua punta?
+
+Domanda: possiamo immaginare vettori anche nello spazio 3D.
+Quante coordinate ci servono per determinare un vettore nello spazio tridimensionale?
+Quante coordinate per un vettore applicato nello spazio tridimensionale?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Disegna i vettori $\vec v$, $\vec w$, $\vec u$ e $\vec k$ dall'Esercizio in~\ref{par6957e1d8} applicati al punto $P=(2,3)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Somma di vettori in coordinate}
+Abbiamo visto come si sommano i vettori usando il metodo ``punta-coda'' in~\ref{par6957e2da}.
+Con le coordinate, la somma di vettori diventa molto facile: basta sommare i numeri!
+Per esempio, se abbiamo due vettori $\vec v = (v_x,v_y)$ e $\vec w=(w_x,w_y)$, possiamo trovare la somma $\vec v+\vec w$ facendo
+\begin{equation}
+	\vec v + \vec w 
+	= (v_x,v_y) + (w_x,w_y)
+	= (v_x + w_x, v_y + w_y) .
+\end{equation}
+Per esempio,
+\begin{equation}
+	(2,4) + (1,2) = (3,6) .
+\end{equation}
+
+A questo punto la lettrice diligente dovrebbe riflettere sul perché sommare le coordinate sia equivalente a eseguire il metodo ``punto-coda''.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Si prendano i vettori dall'esercizio in~\ref{par6957e1d8} e si facciano almeno tre somme, sia con il disegno che con le coordinate.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Moltiplicazione scalare per vettore in coordinate}
+Abbiamo visto in~\ref{par6957e5e4} come moltiplicare un vettore per uno scalare.
+Se si hanno le coordinate del vettore, questa moltiplicazione è semplicemente la moltiplicazione delle coordinate!
+
+Per esempio, se abbiamo un vettore $\vec v = (v_x,v_y)$ e uno scalare $t\in\R$, allora
+\begin{equation}
+	t\vec v
+	= t(v_x,v_y)
+	= (t v_x, t v_y) .
+\end{equation}
+Per esempio, 
+\begin{equation}
+	2 (2,-3) = (4,-6) . 
+\end{equation}
+
+Si guardi con attenzione la seguente riga ti conti:
+\begin{equation}
+	\vec v + \vec v = (v_x,v_y) + (v_x,v_y) = (v_x + v_x, v_y + v_y) = (2v_x,2v_y) = 2\vec v .
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Si prendano tre numeri reali e tre vettori in coordinate e si facciano almeno tre moltiplicazioni scalare per vettore.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Il modulo in termini delle coordinate}
+Il modulo di un vettore si può ricavare dalle coordinate usando il teorema di Pitagora:\footnote{Il Teorema di Pitagora dice che: ``In ogni triangolo rettangolo, la somma dei quadrati costruiti sui cateti è uguale al quadrato costruito sull'ipotenusa.'' Qui per ``quadrato'' si intende ``l'area del quadrato''.}
+se $\vec v=(a,b)$, allora $v=\norm{\vec v} = \sqrt{a^2 + b^2}$.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/vettori-08}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Calcola il modulo dei vettori $\vec v$, $\vec w$, $\vec u$ e $\vec k$ dall'Esercizio in~\ref{par6957e1d8}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Io ti do due vettori:
+\begin{equation}
+\begin{aligned}
+	\vec e_1 &= (1,0) ,\\
+	\vec e_2 &= (0,1) .
+\end{aligned}
+\end{equation}
+Trova due scalari $a,b\in\R$ tali per cui
+\begin{equation}
+	a \vec e_1 + b \vec e_2 = (4,-5) .
+\end{equation}
+
+Possiamo interpretare questo problema così: 
+immagina che i due vettori $\vec e_1$ e $\vec e_2$ siano le uniche due direzioni in cui puoi muoverti.
+Se ti muovi in direzione $\vec e_1$ per una distanza $a$, significa che dal punto in cui sei vai fino alla punta di $a\vec e_1$.
+Quindi, partendo dall'origine $(0,0)$ devi arrivare al punto $(4,-5)$ seguendo un po' $\vec e_1$ e un po' $\vec e_2$.
+Il problema ti chiede di trovare quanto devi seguire l'uno e l'altro vettore.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Io ti do due vettori:
+\begin{equation}
+\begin{aligned}
+	\vec v &= (2,1) ,\\
+	\vec w &= (-1,2) .
+\end{aligned}
+\end{equation}
+Trova due scalari $a,b\in\R$ tali per cui
+\begin{equation}
+	a \vec e_1 + b \vec e_2 = (5,-2) .
+\end{equation}
+
+
+
+

@@ -1,6 +1,6 @@
 % !TEX encoding = UTF-8 Unicode
 \documentclass[a4paper,12pt]{amsart}
-\usepackage[english]{babel}
+\usepackage[italian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 %For Japanese kanji and kana: but Typeset with XeLaTeX !
@@ -45,13 +45,13 @@ urlcolor=Black}
 \usepackage{enumitem}	% Per personalizzare gli elenchi
 %\usepackage{booktabs}	% Per i comandi \toprule \midrule \bottomrule , che fanno righe orrizontali nelle tabelle
 %\usepackage{array}		% Per formattare meglio le celle nelle tabelle.
-%\usepackage{mathtools}	% Per \mathclap
-%\mathtoolsset{showonlyrefs=true} % Per mostrare solo i numeri che servono. With Mathtools: See https://tex.stackexchange.com/questions/4728/how-do-i-number-equations-only-if-they-are-referred-to-in-the-text
+\usepackage{mathtools}	% Per \mathclap
+\mathtoolsset{showonlyrefs=true} % Per mostrare solo i numeri che servono. With Mathtools: See https://tex.stackexchange.com/questions/4728/how-do-i-number-equations-only-if-they-are-referred-to-in-the-text
 %\usepackage[pdftex]{graphicx}	% Per il frontespizio...
 %\usepackage{makeidx}	% Per fare l'indice analitico. Già in amsart, amsbook and amsproc. 
 %\makeindex
 %\allowdisplaybreaks % per avere equazioni su più pagine
-%\usepackage{tikz}
+\usepackage{tikz}
 %
 %\usepackage{framed} % for the environment ``framed''. For more complicated things, use \usepackage{mdframed}.
 %\usepackage{refcheck} % Mostra i label non usati ``Unused label...'' nel log file. See https://tex.stackexchange.com/questions/209782/get-list-of-unused-labels
@@ -166,12 +166,12 @@ urlcolor=Black}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Subsectioning for notes:
-%\renewcommand{\thesubsection}{{\bf\S\arabic{section}.\arabic{subsection}}}
+\renewcommand{\thesubsection}{{\bf\S\arabic{section}.\arabic{subsection}}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{FoglioAMS}
+\title[Matematica e Fisica]{Appunti di Matematica e Fisica per le scuole superiori}
 \author[Nicolussi Golo]{Sebastiano Nicolussi Golo}
 %\date{\today}
 \date{\today. \IfFileExists{./.gittex}{\input{./.gittex}}{}}
@@ -179,7 +179,7 @@ urlcolor=Black}
 \begin{document}
 \maketitle
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \phantomsection
 \addcontentsline{toc}{section}{Contents}
 \tableofcontents
@@ -187,25 +187,7 @@ urlcolor=Black}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-There is difference between the $d$ for integrals $\did$ or differentials $\diff$.
-\[
-\int_E u(x) \did x
-\text{ instead of }
-\int_E u(x) \diff x
-\]
-
-There are commands for norms and absolute values:
-\[
-\norm{v}
-\qquad
-\norm{\int v\did x}
-\qquad
-\abs{v}
-\qquad
-\abs{\int v\did x}
-\qquad
-\nnorm{\int v\did x}
-\]
+\input{vettori}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
