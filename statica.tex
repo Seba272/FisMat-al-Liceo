@@ -368,6 +368,435 @@ Quanto saranno lunghe le due molle?
 \subsection{Esercizio}
 Inventa tu un esercizio e risolvilo.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Una questione di triangoli simili}\label{par695a342c}
+Nel seguito, studieremo il piano inclinato e useremo una semplice proprietà dei triangoli simili.
+Questa semplice proprietà ci permetterà di fare a meno di usare la trigonometria, presumo non si conosca ancora.
+
+Innanzitutto, due triangoli sono simili se hanno gli stessi angoli.
+Chiamiamo $\widetriangle{ABC}$ e $\widetriangle{A'B'C'}$ i due triangoli, dove a lettera uguale corrisponde angolo uguale.
+È una proprietà dei triangoli simili che i lati corrispondenti siano proporzionali tutti con la stessa proporzione.
+In altre parole:
+\begin{equation}\label{eq695a3689}
+	\frac{\overline{AB}}{\overline{A'B'}} 
+	= \frac{\overline{AC}}{\overline{A'C'}}
+	= \frac{\overline{BC}}{\overline{B'C'}} .
+\end{equation}
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-16-01}
+\end{center}
+
+Quindi, se ci viene dato $\widetriangle{ABC}$ e un lato di $\widetriangle{A'B'C'}$, possiamo trovare gli altri due lati di $\widetriangle{A'B'C'}$.
+Per esempio, se $\widetriangle{ABC}$ è il triangolo di lati $\overline{AB}=3$, $\overline{AC}=4$ e $\overline{BC}=5$,
+e se so che $\overline{A'B'} = 1$, allora 
+\begin{equation}
+	\overline{A'C'} = \frac{\overline{AC}}{\overline{AB}} \overline{A'B'} 
+	= \frac{4}{3} ,
+\end{equation}
+e
+\begin{equation}
+	\overline{B'C'} = \frac{\overline{BC}}{\overline{AB}} \overline{A'B'}
+	= \frac{5}{3} .
+\end{equation}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Il piano inclinato}
+Se un oggetto, ad esempio un libro, sta su un tavolo orizzontale il peso è controbilanciato dalla forza vincolare del tavolo.
+Quindi, il libro esercita una forza sul tavolo e il tavolo risponde con una forza uguale in modulo e direzione e contraria in verso. 
+Questa forza del tavolo sul libro è chiamata \emph{forza vincolare}.
+Il nome viene dal fatto che il tavolo è un \emph{vincolo}, ossia impedisce il movimento al libro.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-17}
+\end{center}
+
+Supponiamo ora che il tavolo non sia più orizzontale, ma bensì inclinato:
+il libro è su un \emph{piano inclinato}.
+Il peso del libro è comunque una forza diretta verso terra, verticalmente.
+La forza vincolare del tavolo invece non può che essere perpendicolare al piano.
+Se facciamo la somma di questi due vettori, non otteniamo zero.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-18}
+\end{center}
+
+Ora ti spiego un buon modo di analizzare questa situazione.
+Innanzitutto, prendiamo la retta parallela al piano del tavolo e la retta perpendicolare al piano del tavolo.
+Con queste due rette, scomponiamo le forze come abbiamo imparato in~\ref{par6959428e}.
+Siccome la forza vincolare $\vec F$ è perpendicolare al piano, non c'è niente da scomporre.
+La forza peso $\vec P$ invece si scompone nelle due componenti $\vec P_{\parallelo}$, parallela al piano del tavolo, e $\vec P_{\perp}$, perpendicolare al piano del tavolo.
+
+\begin{center}
+\includegraphics[width=.65\textwidth]{pics/statica-19}
+\includegraphics[width=.34\textwidth]{pics/statica-20}
+\end{center}
+
+Il peso del libro, infatti, ha due conseguenze.
+La prima è che il libro preme sul tavolo: questa forza è~$\vec P_{\perp}$.
+La seconda è che il libro tende a scivolare giù lungo il piano: la causa di questo movimento è la forza~$\vec P_{\parallelo}$.
+
+Siccome il libro non affonda nel tavolo, abbiamo
+\begin{equation}
+	\vec P_{\perp} + \vec F = 0 ,
+\end{equation}
+ossia, la forza vincolare $\vec F$ bilancia $\vec P_{\perp}$ e quindi $\vec F =  -\vec P_{\perp}$.
+
+Cosa bilancia la forza $\vec P_{\parallelo}$?
+La risposta dipende dalla situazione.
+Può essere l'attrito, che vedremo tra poco, oppure un filo con un contrappeso, oppure una molla, o tutte queste e tante altre cose insieme.
+Se niente bilancia la forza $\vec P_{\parallelo}$, o se non è abbastanza bilanciata, allora il libro scivolerà giù dal tavolo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esempio}\label{subs695a37fb}
+Un carrello sta su un piano inclinato.
+Descriviamo questo piano inclinato con un triangolo rettangolo che ha cateto di base pari a $4\unit{m}$, cateto di altezza pari a $3\unit{m}$ e quindi ipotenusa pari a $5\unit{m}$.
+Il carrello ha una massa $M=15\unit{kg}$.
+Al carrello è agganciato un filo che, parallelo al piano inclinato, arriva in cima al piano inclinato e quindi scende verticale con una massa $m$ appesa.
+Quanto deve valere $m$ per tenere in equilibrio il carrello?\\
+
+Risolviamo l'esercizio insieme.
+Innanzitutto facciamo un disegno con le forze principali:
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-21}
+\end{center}
+
+Le forze disegnate sono:
+\begin{itemize}
+\item	$\vec P_p$: il peso del pesetto. 
+	Il modulo di questa forza è $P_p = gm$, dove $g$ è l'accelerazione di gravità.
+	Questa forza è verticale e punta verso il basso.
+\item	$\vec T_p$: la tensione del filo attaccato al pesetto.
+	Siccome il pesetto è fermo e le uniche forze che agiscono su di esso sono $\vec P_p$ e $\vec T_p$, possiamo già dire che $\vec P_p + \vec T_p = 0$, ossia 
+		\begin{equation}
+			\vec T_p = - \vec P_p .
+		\end{equation} 
+	Quindi il modulo di $\vec T_p$ è $T_p = gm$.
+\item	$\vec P_c$: il peso del carrello.
+	Il modulo di questa forza è $P_c = gM$.
+	Questa forza è verticale e punta verso il basso.
+\item	$\vec F_v$: la forza vincolare del piano inclinato.
+	Questa forza è perpendicolare al piano inclinato, e il suo modulo dipende dal peso del carrello.
+\item	$\vec T_c$: la tensione del filo attaccato al carrello.
+	Siccome la tensione lungo il filo non cambia modulo\footnote{la carrucola non ha attrito},
+	possiamo già dire che $T_c = T_p = gm$.
+\end{itemize}
+
+Studiamo in dettaglio la situazione delle forze sul carrello:
+
+\begin{center}
+\includegraphics[width=.5\textwidth]{pics/statica-22}
+\end{center}
+
+Tre forze agiscono sul carrello: $\vec P_c$, $\vec F_v$ e $\vec T_c$.
+Siccome il carrello è in equilibrio abbiamo
+\begin{equation}\label{eq695a1776}
+	\vec P_c + \vec F_v + \vec T_c = 0 .
+\end{equation}
+Scomponiamo $\vec P_c$ nelle due componenti parallela $\vec P_{\parallelo}$ e perpendicolare $\vec P_\perp$ al piano inclinato.
+Usando questa scomposizione in~\eqref{eq695a1776}, otteniamo
+\begin{equation}
+\begin{aligned}
+	0 &= \vec P_c + \vec F_v + \vec T_c \\
+	&= \vec P_{\parallelo} + \vec P_\perp + \vec F_v + \vec T_c \\
+	&= (\vec P_{\parallelo} + \vec T_c ) + (\vec P_\perp + \vec F_v) .
+\end{aligned}
+\end{equation}
+Per quello\footnotemark{} che abbiamo imparato in \ref{par695a248c},
+\footnotetext{
+In~\eqref{eq695a2590} abbiamo imparato che 
+``prima sommo, poi scompongo $=$ prima scompongo, poi sommo''.
+}
+ sappiamo che 
+i vettori $\vec P_{\parallelo} + \vec T_c$ e $\vec P_\perp + \vec F_v$
+sono le componenti di $\vec P_c + \vec F_v + \vec T_c$ lungo le due rette.
+Siccome $\vec P_c + \vec F_v + \vec T_c=0$, allora queste componenti devono essere zero, e quindi otteniamo
+\begin{equation}
+	\begin{cases}
+	\vec P_{\parallelo} + \vec T_c &= 0 ,\\
+	\vec P_\perp + \vec F_v &= 0 .
+	\end{cases}
+\end{equation}
+
+Di queste due equazioni, quella che più ci interessa è la prima.
+Infatti, $\vec P_{\parallelo} + \vec T_c = 0$ implica che il modulo di $\vec T_c$ 
+(che sappiamo essere $T_c = gm$), è uguale al modulo di $\vec P_{\parallelo}$:
+\begin{equation}\label{eq695a377b}
+	gm = P_{\parallelo} .
+\end{equation}
+Siccome $m$ è l'incognita da determinare e siccome $\vec P_{\parallelo}$ dovremmo saperlo calcolare, questa dovrebbe darci la risposta.\\
+
+Dobbiamo calcolare $\vec P_{\parallelo}$ e lo facciamo usando un po' di sana geometria euclidea, quella che conosciamo da almeno duemiladuecento anni.
+Ho provato a riassumere in~\ref{par695a342c} quello che ci serve.
+
+Se guardiamo bene lo schema delle forze sul carrello, e in particolare la scomposizione della forza peso, noteremo la presenza di due triangoli simili:
+\begin{center}
+\includegraphics[width=.45\textwidth]{pics/statica-23}
+\includegraphics[width=.45\textwidth]{pics/statica-24}
+\end{center}
+Il triangolo piccolo è quello dato dalla scomposizione della forza peso,
+quindi i suoi lati sono $P$, $P_\parallelo$ e $P_\perp$.
+Il triangolo più grande invece è quello che descrive il piano inclinato, e i suoi lati sono la base $b=4\unit{m}$, l'altezza $a=3\unit{m}$ e l'ipotenusa $i=5\unit{m}$.
+
+{\bf Esercizio:} individua gli angoli uguali.
+
+Dopo che hai provato a individuare gli angoli uguali\footnote{Innanzi tutto, nota che in entrambi i triangoli c'è un angolo retto.
+Poi, nota che $i$ e $P_\parallelo$ sono paralleli, e che $a$ e $P$ sono anche paralleli. Quindi l'angolo tra $i$ e $a$ deve essere uguale all'angolo tra $P_\parallelo$ e $P$.
+Infine, rimane un angolo in ciascun triangoli, che quindi questi due angoli devono essere uguali.
+Il disegno è:
+\begin{center}
+\includegraphics[width=.2\textwidth]{pics/statica-25}
+\end{center}
+}
+potrai usare~\eqref{eq695a3689} e dire che
+\begin{equation}
+	\frac{ P_\parallelo }{ a } = \frac{ P }{ i },
+\end{equation}
+e quindi 
+\begin{equation}\label{eq695a378d}
+	P_\parallelo = \frac{ P }{ i } a 
+	= \frac{gM }{5\unit{m}} 3\unit{m}
+	= \frac{3}{5} g M .
+\end{equation}
+
+Finalmente possiamo concludere usando~\eqref{eq695a377b} e~\eqref{eq695a378d}:
+\begin{equation}
+	gm = \frac{3}{5} g M ,
+\end{equation}
+cioè
+\begin{equation}
+	m = \frac{3}{5} M 
+	= \frac{3}{5} 15 \unit{kg}
+	= 9 \unit{kg} .
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Stesso esempio, meno parole}
+Nel precedente paragrafo~\ref{subs695a37fb}, ho scritto tanto perché desidero mostrare il ragionamento nella sua interezza.
+Quello è quel che dovrebbe succedere nella tua testa quando affronti un problema di fisica.
+Però, quando ti chiedo di risolvere un problema in una verifica, non hai il tempo necessario per scrivere tutte quelle cose: il pensiero è molto, molto più veloce della penna (o della tastiera).
+Devi essere sintetico nella scrittura, e qui ti mostro come io descriverei lo stesso problema con meno parole.
+Non essere però sintetico nel pensiero!\\
+
+Innanzitutto facciamo un disegno con le forze principali:
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-21}
+\end{center}
+
+Le forze disegnate sono:
+\begin{itemize}
+\item	$\vec P_p$: il peso del pesetto.
+	$P_p = gm$, $g$ è l'accelerazione di gravità.
+\item	$\vec T_p$: la tensione del filo attaccato al pesetto.
+	Siccome il pesetto è fermo: $\vec P_p + \vec T_p = 0$, 
+	quindi $T_p = gm$.
+\item	$\vec P_c$: il peso del carrello.
+	$P_c = gM$.
+\item	$\vec F_v$: la forza vincolare del piano inclinato.
+\item	$\vec T_c$: la tensione del filo attaccato al carrello.
+	Siccome la tensione lungo il filo non cambia modulo: $P_c = gM$.
+\end{itemize}
+
+Le forze sul carrello:
+
+\begin{center}
+\includegraphics[width=.5\textwidth]{pics/statica-22}
+\end{center}
+
+Siccome il carrello è in equilibrio:
+\begin{equation}\label{eq695a1776}
+	\vec P_c + \vec F_v + \vec T_c = 0 .
+\end{equation}
+Scomponiamo $\vec P_c$ nelle due componenti parallela $\vec P_{\parallelo}$ e perpendicolare $\vec P_\perp$ al piano inclinato.
+Quindi:
+\begin{equation}
+	\begin{cases}
+	\vec P_{\parallelo} + \vec T_c &= 0 ,\\
+	\vec P_\perp + \vec F_v &= 0 .
+	\end{cases}
+\end{equation}
+Quindi:
+\begin{equation}\label{eq695a377b_bis}
+	P_{\parallelo} = T_c .
+\end{equation}
+
+
+Per calcolare $\vec P_{\parallelo}$ usiamo la presenza di due triangoli simili:
+\begin{center}
+\includegraphics[width=.5\textwidth]{pics/statica-25}
+\end{center}
+%Il triangolo piccolo è quello dato dalla scomposizione della forza peso,
+%quindi i suoi lati sono $P$, $P_\parallelo$ e $P_\perp$.
+dove $b=4\unit{m}$,  $a=3\unit{m}$ e  $i=5\unit{m}$.
+
+Per la proporzionalità tra lati corrispondenti in triangoli simili, otteniamo
+\begin{equation}
+	\frac{ P_\parallelo}{ a } = \frac{ P }{ i },
+\end{equation}
+e quindi 
+\begin{equation}\label{eq695a378d_bis}
+	P_\parallelo = \frac{ P }{ i } a 
+	= \frac{gM }{5\unit{m}} 3\unit{m}
+	= \frac{3}{5} g M .
+\end{equation}
+
+Finalmente possiamo concludere usando~\eqref{eq695a377b_bis} e~\eqref{eq695a378d_bis}:
+\begin{equation}
+	gm = \frac{3}{5} g M ,
+\end{equation}
+cioè
+\begin{equation}
+	m = \frac{3}{5} M 
+	= \frac{3}{5} 15 \unit{kg}
+	= 9 \unit{kg} .
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Un carrello sta su un piano inclinato.
+Descriviamo questo piano inclinato con un triangolo rettangolo che ha cateto di base pari a $24\unit{m}$, cateto di altezza pari a $7\unit{m}$.
+% e quindi ipotenusa pari a $25\unit{m}$.
+Il carrello ha una massa $M=23\unit{kg}$.
+Al carrello è agganciato un filo che, parallelo al piano inclinato, arriva in cima al piano inclinato e quindi scende verticale con una massa $m$ appesa.
+Quanto deve valere $m$ per tenere in equilibrio il carrello?\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Un carrello sta su un piano inclinato.
+Descriviamo questo piano inclinato con un triangolo rettangolo che ha cateto di base pari a $4\unit{m}$, cateto di altezza pari a $3\unit{m}$ e quindi ipotenusa pari a $5\unit{m}$.
+Il carrello ha una massa $M=20\unit{kg}$.
+Al carrello è agganciata una molla con costante elastica $k=250 \unit{N/m}$.
+Di quanto si allunga la molla?
+
+\begin{center}
+\includegraphics[width=.5\textwidth]{pics/statica-26}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Inventa un esercizio e risolvilo.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{L'attrito}
+Quando un oggetto è premuto contro una superficie subisce una \emph{forza d'attrito (radente)}.
+La forza d'attrito si oppone al moto con una intensità che dipende dalla forza a cui si oppone.
+Per esempio, se un baule sta sul pavimento senza che nessuno lo spinga, la forza d'attrito è nulla.
+Se però provo a spingerlo, inizialmente il baule non si sposta: la mia spinta viene controbilanciata dalla forza d'attrito.
+
+Se aumento gradualmente la mia spinta, ad un certo punto il baule si sposta.
+Cosa succede?
+La forza d'attrito tra baule e pavimento può raggiungere un valore massimo.
+Se io spingo con una forza superiore a quel valore massimo, la mia spinta vincerà sulla forza d'attrito e quindi il baule si muove.
+
+La \emph{forza d'attrito statico massimale} $F_{a,\max}$ è direttamente proporzionale alla forza che preme l'oggetto contro la superficie, ossia
+\begin{equation}
+	F_{a,\max} = \mu_s F_n ,
+\end{equation}
+dove
+$F_n$ è il modulo della forza perpendicolare che preme l'oggetto sulla superficie,
+mentre la costante $\mu_s$ (``mü esse'') si chiama \emph{coefficiente d'attrito statico} e dipende dalle due superfici in contatto.
+Il coefficiente d'attrito è un numero puro, ossia non ha unità di misura.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-27}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esempio}
+Un libro sta su un tavolo orizzontale e viene premuto dalla mia mano.
+Il peso del libro è $P$ mentre la forza impressa da me è $F_{\text{mano}}$.
+Il coefficiente d'attrito statico tra libro e tavolo è $\mu_s$.
+Quanto devo spingere il libro perché si scivoli lungo il tavolo?
+
+La risposta è semplice.
+Siccome la forza totale perpendicolare al tavolo è la somma del peso e della forza impressa dalla mia mano, ottengo
+$F_n = P + F_{\text{mano}}$.
+Per poter smuovere il libro devo spingere con una forza maggiore della forza d'attrito massimale, ossia
+$F_{a,\max} = \mu_s F_n = \mu_s (P + F_{\text{mano}})$.
+
+Per esempio, se $\mu_s = 0{,}23 $ il peso è $P=5\,\unit{N}$ e io premo con $F_{\text{mano}} = 4{,}5\,\unit{N}$,
+allora la forza necessaria per smuovere il libro è
+\begin{equation}
+	F_{a,\max} = \mu_s(P + F_{\text{mano}})
+	= 0{,}23 (5\,\unit{N} + 4{,}5\,\unit{N})
+	= 2{,}185 \,\unit{N} .
+\end{equation}
+Per referenza, $2{,}185 \,\unit{N}$ è il peso di un oggetto di massa $223\,\unit{g}$ circa.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-28}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Studiamo la situazione dell'esempio in~\ref{subs695a37fb}, ma con l'aggiunta dell'attrito statico.
+
+Un carrello sta su un piano inclinato.
+Descriviamo questo piano inclinato con un triangolo rettangolo che ha cateto di base pari a $4\unit{m}$, cateto di altezza pari a $3\unit{m}$ e quindi ipotenusa pari a $5\unit{m}$.
+Il carrello ha una massa $M=15\unit{kg}$.
+Al carrello è agganciato un filo che, parallelo al piano inclinato, arriva in cima al piano inclinato e quindi scende verticale con una massa $m$ appesa.
+Il carrello ha le ruote bloccate e quindi tra carrello e piano c'è una forza d'attrito con coefficiente d'attrito statico $\mu_s = 0{,}2$.
+
+Quanto deve valere $m$ per tenere in equilibrio il carrello?
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio $\star$}
+Abbiamo due corpi di massa $m$ ciascuno appoggiati su un piano.
+Il coefficiente d'attrito statico tra i corpi e la superficie è $\mu_s$.
+Le due masse sono a distanza $L$ e sono unite da una molla.
+La molla ha lunghezza a riposo $\ell$ e costante elastica $k_e$.
+Quanto vale $L$ al massimo prima che i corpi vengano avvicinati dalla molla?
+In altre parole, qual è la distanza massima $L_{\max}$ tra i due corpi per cui rimangono fermi?
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/statica-29}
+\end{center}
+
+Per avere dei numeri: 
+$m= 0,{935} \,\unit{kg}$,
+$\mu_s = 0{,}35$, 
+$\ell = 10\,\unit{cm}$,
+$k_e = 115\,\unit{N/m}$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

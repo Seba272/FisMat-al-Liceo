@@ -279,6 +279,119 @@ Trova due scalari $a,b\in\R$ tali per cui
 	a \vec e_1 + b \vec e_2 = (5,-2) .
 \end{equation}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Scomposizione dei vettori}\label{par6959428e}
+La scomposizione di un vettore non è altro che la somma di vettori, solo vista dal di dietro.
+Per esempio, pensando ai numeri invece dei vettori, sappiamo che $5+2=7$.
+Allora sappiamo che il sette si scompone (per la somma) in cinque e due.
+Ma non è l'unica scomposizione, per esempio possiamo scomporre il sette in quattro e tre, perché $4+3=7$.
+
+Con i vettori è simile.
+Abbiamo visto come, dati due vettori $\vec u$ e $\vec v$, possiamo farne la somma $\vec w=\vec u+\vec v$.
+Ora facciamo il contrario: dato un vettore $\vec w$, vogliamo trovare due altri vettore $\vec u$ e $\vec v$ tali che $\vec w=\vec u+\vec v$.
+Questa è una scomposizione del vettore $\vec w$ nei due $\vec u$ e $\vec v$.\footnote{
+Problema per la lettrice impegnata: dato un vettore $\vec w$ e un altro vettore $\vec v$, trova un vettore $\vec u$ tale che $\vec u + \vec v = \vec w$?
+Con i numeri invece dei vettori: dati due numeri $z$ e $y$, trova un numero $x$ tale che $z=x+y$.}
+
+La scomposizione diventa interessante se sono prefissate due rette, ossia:
+Dato un vettore $\vec w$ e due rette $r$ e $s$, vogliamo trovare due vettori $\vec u$ e $\vec v$ tali che $r$ è la direzione di $\vec u$ e $s$ è la direzione di $\vec v$.
+
+\begin{center}
+\includegraphics[width=.5\textwidth]{pics/vettori-09}
+\end{center}
+
+Il modo geometrico di trovare questi due vettori è molto semplice.
+Prendiamo una delle due rette, per esempio $s$, e la trasliamo parallelamente alla punta di $\vec w$, così:
+
+\begin{center}
+\includegraphics[width=.5\textwidth]{pics/vettori-10}
+\end{center}
+
+A questo punto, $\vec u$ è il vettore che va dalla coda di $\vec w$ al punto di intersezione di $r$ e $s$ traslato, e $\vec v$ è il vettore che va da questa intersezione alla punta di $\vec w$.
+Per costruzione, abbiamo proprio che la direzione di $\vec u$ è $s$, la direzione di $\vec v$ è $\vec w$ e $\vec u + \vec v = \vec w$.
+
+\begin{center}
+\includegraphics[width=.5\textwidth]{pics/vettori-11}
+\end{center}
+
+Questo è un modo geometrico di fare la scomposizione.
+Se le due rette sono perpendicolari tra loro, possiamo usare della trigonometria.
+Se $\alpha$ è l'angolo tra $\hat w$ e la retta $r$, allora
+\begin{equation}
+	u = w \cos(\alpha),
+	\qquad
+	v = w \sen(\alpha).
+\end{equation}
+
+\begin{center}
+\includegraphics[width=.5\textwidth]{pics/vettori-12}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Scomponi i seguenti vettori nelle due rette date.
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{pics/vettori-13}
+\end{center}
+
+NB: In questo esercizio dovresti notare che il risultato della scomposizione dipende dalla scelta di entrambe le rette.
+Per esempio, nei due casi a destra, il vettore è lo stesso e una delle due rette è la stessa, ma cambia la retta che va verso l'alto: questo provoca una scomposizione diversa.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{La scomposizione delle somme}\label{par695a248c}
+Uno dei motivi per scomporre i vettori è che aiuta a sommare i vettori.
+Supponiamo di avere due vettori $\vec v$ e $\vec w$ di cui vogliamo fare la somma.
+\begin{center}
+\includegraphics[width=.3\textwidth]{pics/vettori-14-01}
+\end{center}
+Scegliamo due rette:
+\begin{center}
+\includegraphics[width=.3\textwidth]{pics/vettori-14-02}
+\end{center}
+Scomponiamo entrambi i vettori lungo le due rette:
+\begin{center}
+\includegraphics[width=.3\textwidth]{pics/vettori-14-04}
+\includegraphics[width=.3\textwidth]{pics/vettori-14-03}
+\includegraphics[width=.3\textwidth]{pics/vettori-14-05}
+\end{center}
+Abbiamo così $\vec v = \vec v_1 + \vec v_2$ e $\vec w = \vec w_1 + \vec w_2$.
+Portiamo la nostra attenzione alle sole componenti $\vec v_1$, $\vec v_2$, $\vec w_1$ e $\vec w_2$, e sommiamo quelle lungo ciascuna retta, ossia quelle che condividono la direzione:
+\begin{center}
+\includegraphics[width=.3\textwidth]{pics/vettori-14-06}
+\includegraphics[width=.3\textwidth]{pics/vettori-14-07}
+\includegraphics[width=.3\textwidth]{pics/vettori-14-08}
+\end{center}
+Queste somme sono sì eseguite con il metodo punto-coda, ma essendo lungo la stessa retta stiamo in pratica solo sommando i moduli (con segno dato dal verso).
+Insomma, sommare vettori che hanno la stessa direzione è quasi come sommare numeri.
+
+A questo punto abbiamo $\vec v_1 + \vec w_1$ e $\vec v_2 + \vec w_2$.
+Algebricamente, stiamo facendo questo:
+\begin{equation}
+\begin{aligned}
+	\vec v + \vec w 
+	&= (\vec v_1 + \vec v_2) + (\vec w_1 + \vec w_2) \\
+	&= (\vec w_1 + \vec w_1) + (\vec v_2 + \vec w_2) .
+\end{aligned}
+\end{equation}
+Effettivamente, anche dal disegno vediamo che $\vec w_1 + \vec w_1$ e $\vec v_2 + \vec w_2$ sono le componenti di $\vec v + \vec w$ lungo le due rette.
+\begin{center}
+\includegraphics[width=.3\textwidth]{pics/vettori-14-09}
+\includegraphics[width=.3\textwidth]{pics/vettori-14-10}
+\end{center}
+In altre parole
+\begin{equation}\label{eq695a2590}
+\boxed{
+	\text{prima sommo, poi scompongo}
+	= 
+	\text{prima scompongo, poi sommo}.
+	}
+\end{equation}
+Questa regola~\eqref{eq695a2590} vale anche quando abbiamo più di due vettori.
+
+
+
+
 
 
 
