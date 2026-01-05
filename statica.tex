@@ -1,6 +1,8 @@
 % !TEX encoding = UTF-8 Unicode
 %!TEX root = FisMat.tex
 
+\renewcommand{\pics}{pics}
+
 \section{Statica}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,7 +106,7 @@ Vogliamo sapere quale forza agisce sul soffitto.
 
 Per prima cosa, facciamo un diagramma delle forze:
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-01}
+\includegraphics[width=.75\textwidth]{\pics/statica-01}
 \end{center}
 Sappiamo che il peso del lampadario è $P=gm$, dove $g$ è l'accelerazione di gravità,
 e sappiamo che il peso del lampadario punta verso il basso.
@@ -117,7 +119,7 @@ Primo, il lampadario è fermo, quindi in equilibrio.
 Questo significa che la somma delle forze che agiscono sul lampadario deve essere zero.
 Quindi c'è una forza che bilancia la forza peso: ovviamente è la tensione $\vec T$ del cavo che tiene il lampadario:
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-02}
+\includegraphics[width=.75\textwidth]{\pics/statica-02}
 \end{center}
 Ricapitolando, siccome la somma delle forze che agiscono sul lampadario deve essere zero, abbiamo 
 \begin{equation}
@@ -128,7 +130,7 @@ Così, la tensione sul cavo è $T=P=gm$ ed è opposta alla forza peso, ossia ver
 
 Secondo, il cavo che tiene il lampadario è fermo, quindi la somma delle forze che agiscono su di esso deve essere zero.
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-03}
+\includegraphics[width=.75\textwidth]{\pics/statica-03}
 \end{center}
 Ho disegnato due forze sul cavo: una forza $\vec T_g$ ad un capo del cavo, e una forza $\vec T_s$ all'altro capo del cavo.
 Siccome la somma è zero, dobbiamo avere 
@@ -145,7 +147,7 @@ Per questo motivo, abbiamo
 
 Infine, chiamo $\vec F$ la forza che agisce sul soffitto:
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-04}
+\includegraphics[width=.75\textwidth]{\pics/statica-04}
 \end{center}
 Naturalmente, $\vec F = - \vec T_s$, e quindi $\vec F = \vec P$.
 
@@ -164,7 +166,7 @@ Se allungata o compressa, denotiamo con $\Delta x$ la differenza rispetto alla l
 Per distinguere se questo scarto è di allungamento o compressione, definiamo il vettore $\Delta\vec x$ come il vettore che ha coda nel punto di riposo della molla e punta nella posizione attuale della molla:
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-05}
+\includegraphics[width=.75\textwidth]{\pics/statica-05}
 \end{center}
 
 La \emph{legge di Hooke} afferma che la \emph{forza elastica} $\vec F$ impressa dalla molla è
@@ -178,7 +180,7 @@ L'unità di misura della costante elastica è $\unit{\frac{N}{m}}$.
 Così, una molla con costante elastica $1\unit{N\per m}$ da una forza di un Newton per ogni metro di compressione (o allungamento).
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-06}
+\includegraphics[width=.75\textwidth]{\pics/statica-06}
 \end{center}
 
 NB!
@@ -190,13 +192,8 @@ NB!
 Una molla esercita una forza su entrambi gli estremi, con la medesima intensità (ossia modulo), medesima direzione, ma verso opposto.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-06-1}
+\includegraphics[width=.75\textwidth]{\pics/statica-06-1}
 \end{center}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Esercizio}
-Una molla di costante elastica $k=34\unit{N/m}$ e di lunghezza a riposo $\ell=45\unit{cm}$ è dentro una scatola lunga $30\unit{cm}$.
-Quali sono le forze impresse dalla molla sulle due pareti della scatola?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Esercizio}
@@ -204,16 +201,22 @@ Nei seguenti disegni, sono rappresentate delle molle sia a riposo che sotto sfor
 Nelle immagini delle molle sotto sforzo, disegna gli scarti $\Delta \vec x$ e le forze elastiche $\vec F$ date dalla legge di Hooke.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-07}
+\includegraphics[width=.75\textwidth]{\pics/statica-07}
 \end{center}
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-08}
+\includegraphics[width=.75\textwidth]{\pics/statica-08}
 \end{center}
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-09}
+\includegraphics[width=.75\textwidth]{\pics/statica-09}
 \end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Una molla di costante elastica $k=34\unit{N/m}$ e di lunghezza a riposo $\ell=45\unit{cm}$ è dentro una scatola lunga $30\unit{cm}$.
+Quali sono le forze impresse dalla molla sulle due pareti della scatola?
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Esercizio}
@@ -232,8 +235,8 @@ Come fanno?
 Prova a rispondere prima di continuare a leggere.
 
 \begin{center}
-\includegraphics[width=.45\textwidth]{pics/statica-10}
-\includegraphics[width=.45\textwidth]{pics/statica-11}
+\includegraphics[width=.45\textwidth]{\pics/statica-10}
+\includegraphics[width=.45\textwidth]{\pics/statica-11}
 \end{center}
 
 Sì, fanno così: ci appoggiano sopra un corpo di massa $m=100\unit{g}$ e misurano quanto la molla si contrae.
@@ -269,7 +272,7 @@ Se le mettiamo in serie per il lungo, quanto quali forze esercitano le molle sul
 E se le mettiamo in parallelo per il largo?
 
 \begin{center}
-\includegraphics[width=.8\textwidth]{pics/statica-12}
+\includegraphics[width=.8\textwidth]{\pics/statica-12}
 \end{center}
 
 Se preferisci avere dei numeri, considera $k=60\unit{N/m}$, $\ell = 10\unit{cm}$,
@@ -291,7 +294,7 @@ Anzi, magari non c'è nemmeno una molla, ma un sofisticato meccanismo elettromag
 
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-13}
+\includegraphics[width=.75\textwidth]{\pics/statica-13}
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -303,7 +306,7 @@ Nella scatola, misuriamo che la prima molla è ora lunga $x_1$ e la seconda moll
 Ovviamente, $x_1+x_2 = L$.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-14}
+\includegraphics[width=.75\textwidth]{\pics/statica-14}
 \end{center}
 
 \begin{enumerate}
@@ -328,7 +331,7 @@ Il triangolo formato dalle molle ha base $L$ (lungo il soffitto) e altezza $h$.
 Al vertice opposto al soffitto è appeso il lampadario, di peso $P$.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-15}
+\includegraphics[width=.75\textwidth]{\pics/statica-15}
 \end{center}
 
 \begin{enumerate}
@@ -351,7 +354,7 @@ Alla seconda molla, più in basso, viene agganciata una massa $m$.
 Quanto saranno lunghe le due molle?
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-16}
+\includegraphics[width=.75\textwidth]{\pics/statica-16}
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -361,7 +364,7 @@ Quanto saranno lunghe le due molle?
 %Quanto saranno lunghe le due molle?
 %
 %\begin{center}
-%\includegraphics[width=.75\textwidth]{pics/statica-16}
+%\includegraphics[width=.75\textwidth]{\pics/statica-16}
 %\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -384,7 +387,7 @@ In altre parole:
 \end{equation}
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-16-01}
+\includegraphics[width=.75\textwidth]{\pics/statica-16-01}
 \end{center}
 
 Quindi, se ci viene dato $\widetriangle{ABC}$ e un lato di $\widetriangle{A'B'C'}$, possiamo trovare gli altri due lati di $\widetriangle{A'B'C'}$.
@@ -410,7 +413,7 @@ Questa forza del tavolo sul libro è chiamata \emph{forza vincolare}.
 Il nome viene dal fatto che il tavolo è un \emph{vincolo}, ossia impedisce il movimento al libro.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-17}
+\includegraphics[width=.75\textwidth]{\pics/statica-17}
 \end{center}
 
 Supponiamo ora che il tavolo non sia più orizzontale, ma bensì inclinato:
@@ -420,7 +423,7 @@ La forza vincolare del tavolo invece non può che essere perpendicolare al piano
 Se facciamo la somma di questi due vettori, non otteniamo zero.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-18}
+\includegraphics[width=.75\textwidth]{\pics/statica-18}
 \end{center}
 
 Ora ti spiego un buon modo di analizzare questa situazione.
@@ -430,8 +433,8 @@ Siccome la forza vincolare $\vec F$ è perpendicolare al piano, non c'è niente 
 La forza peso $\vec P$ invece si scompone nelle due componenti $\vec P_{\parallelo}$, parallela al piano del tavolo, e $\vec P_{\perp}$, perpendicolare al piano del tavolo.
 
 \begin{center}
-\includegraphics[width=.65\textwidth]{pics/statica-19}
-\includegraphics[width=.34\textwidth]{pics/statica-20}
+\includegraphics[width=.65\textwidth]{\pics/statica-19}
+\includegraphics[width=.34\textwidth]{\pics/statica-20}
 \end{center}
 
 Il peso del libro, infatti, ha due conseguenze.
@@ -461,7 +464,7 @@ Risolviamo l'esercizio insieme.
 Innanzitutto facciamo un disegno con le forze principali:
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-21}
+\includegraphics[width=.75\textwidth]{\pics/statica-21}
 \end{center}
 
 Le forze disegnate sono:
@@ -488,7 +491,7 @@ Le forze disegnate sono:
 Studiamo in dettaglio la situazione delle forze sul carrello:
 
 \begin{center}
-\includegraphics[width=.5\textwidth]{pics/statica-22}
+\includegraphics[width=.5\textwidth]{\pics/statica-22}
 \end{center}
 
 Tre forze agiscono sul carrello: $\vec P_c$, $\vec F_v$ e $\vec T_c$.
@@ -534,8 +537,8 @@ Ho provato a riassumere in~\ref{par695a342c} quello che ci serve.
 
 Se guardiamo bene lo schema delle forze sul carrello, e in particolare la scomposizione della forza peso, noteremo la presenza di due triangoli simili:
 \begin{center}
-\includegraphics[width=.45\textwidth]{pics/statica-23}
-\includegraphics[width=.45\textwidth]{pics/statica-24}
+\includegraphics[width=.45\textwidth]{\pics/statica-23}
+\includegraphics[width=.45\textwidth]{\pics/statica-24}
 \end{center}
 Il triangolo piccolo è quello dato dalla scomposizione della forza peso,
 quindi i suoi lati sono $P$, $P_\parallelo$ e $P_\perp$.
@@ -548,7 +551,7 @@ Poi, nota che $i$ e $P_\parallelo$ sono paralleli, e che $a$ e $P$ sono anche pa
 Infine, rimane un angolo in ciascun triangoli, che quindi questi due angoli devono essere uguali.
 Il disegno è:
 \begin{center}
-\includegraphics[width=.2\textwidth]{pics/statica-25}
+\includegraphics[width=.2\textwidth]{\pics/statica-25}
 \end{center}
 }
 potrai usare~\eqref{eq695a3689} e dire che
@@ -583,7 +586,7 @@ Non essere però sintetico nel pensiero!\\
 
 Innanzitutto facciamo un disegno con le forze principali:
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-21}
+\includegraphics[width=.75\textwidth]{\pics/statica-21}
 \end{center}
 
 Le forze disegnate sono:
@@ -603,7 +606,7 @@ Le forze disegnate sono:
 Le forze sul carrello:
 
 \begin{center}
-\includegraphics[width=.5\textwidth]{pics/statica-22}
+\includegraphics[width=.5\textwidth]{\pics/statica-22}
 \end{center}
 
 Siccome il carrello è in equilibrio:
@@ -626,7 +629,7 @@ Quindi:
 
 Per calcolare $\vec P_{\parallelo}$ usiamo la presenza di due triangoli simili:
 \begin{center}
-\includegraphics[width=.5\textwidth]{pics/statica-25}
+\includegraphics[width=.5\textwidth]{\pics/statica-25}
 \end{center}
 %Il triangolo piccolo è quello dato dalla scomposizione della forza peso,
 %quindi i suoi lati sono $P$, $P_\parallelo$ e $P_\perp$.
@@ -672,7 +675,7 @@ Al carrello è agganciata una molla con costante elastica $k=250 \unit{N/m}$.
 Di quanto si allunga la molla?
 
 \begin{center}
-\includegraphics[width=.5\textwidth]{pics/statica-26}
+\includegraphics[width=.5\textwidth]{\pics/statica-26}
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -702,7 +705,7 @@ mentre la costante $\mu_s$ (``mü esse'') si chiama \emph{coefficiente d'attrito
 Il coefficiente d'attrito è un numero puro, ossia non ha unità di misura.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-27}
+\includegraphics[width=.75\textwidth]{\pics/statica-27}
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -728,7 +731,7 @@ allora la forza necessaria per smuovere il libro è
 Per referenza, $2{,}185 \,\unit{N}$ è il peso di un oggetto di massa $223\,\unit{g}$ circa.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-28}
+\includegraphics[width=.75\textwidth]{\pics/statica-28}
 \end{center}
 
 
@@ -754,7 +757,7 @@ La molla ha lunghezza a riposo $\ell$ e costante elastica $k_e$.
 Quanto vale $L$ al massimo prima che i corpi vengano avvicinati dalla molla?
 In altre parole, qual è la distanza massima $L_{\max}$ tra i due corpi per cui rimangono fermi?
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/statica-29}
+\includegraphics[width=.75\textwidth]{\pics/statica-29}
 \end{center}
 
 Per avere dei numeri: 

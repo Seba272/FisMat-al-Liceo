@@ -1,6 +1,8 @@
 % !TEX encoding = UTF-8 Unicode
 %!TEX root = FisMat.tex
 
+\renewcommand{\pics}{pics}
+
 \section{I vettori}
 I vettori sembrano sconvolgere le studentesse e gli studenti a tal punto che qualcuno vuole smettere di studiare matematica e fisica.
 Prima di fare scelte drastiche di cui potreste pentirvi in futuro, dovete leggere questa frase:
@@ -32,7 +34,7 @@ Un \emph{vettore}, in quanto freccia, porta con se tre informazioni:
 \begin{enumerate}
 \item	La \emph{direzione}, ossia la retta su cui giace la freccia. Attenzione, due rette parallele sono la stessa direzione.
 \item	Il \emph{verso}: data la retta, il vettore (la freccia) può puntare in due direzioni opposte -- di là o di qua.
-\item	Il \emph{modulo}, ossia la lunghezza del vettore. Il modulo di un vettore $v$ si denota con $\norm{v}$.
+\item	Il \emph{modulo}, ossia la lunghezza del vettore. Il modulo di un vettore $\vec v$ si denota con $\norm{\vec v}$.
 \end{enumerate}
 
 Un vettore, in quanto freccia, ha due punti speciali:
@@ -42,7 +44,7 @@ Un vettore, in quanto freccia, ha due punti speciali:
 \end{enumerate}
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/vettori-01}
+\includegraphics[width=.75\textwidth]{\pics/vettori-01}
 %\begin{tikzpicture}
 %	\draw[->] (0,0) -- (5,0);
 %	\draw[decorate, decoration={brace, amplitude=10pt, raise=5pt, mirror}] 
@@ -63,12 +65,12 @@ Tra i seguenti vettori:
 Quindi, quali delle seguenti frecce sono lo stesso vettore?
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/vettori-02}
+\includegraphics[width=.75\textwidth]{\pics/vettori-02}
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Usanze di nome}
-Se dobbiamo dare un nome a un vettore, possiamo usare una lettera qualunque, come $v$, $w$ oppure $z$, perché non siamo in dittatura quindi è nostro dovere perseguire la chiarezza, non la uniformità dei costumi.
+Se dobbiamo dare un nome a un vettore, possiamo usare una lettera qualunque, come $v$, $w$ oppure $z$.
 È costume mettere una freccina sopra il nome di un vettore per indicare che stiamo parlando di un vettore.
 Per esempio, $\vec v$, $\vec w$ e $\vec z$.
 Questo costume risulta particolarmente utile se vogliamo parlare del modulo di un vettore senza usare le barrette: così, il modulo di $\vec v$ viene indicato con $v$ (senza freccina):
@@ -92,7 +94,7 @@ Disegna i vettori applicati $(\vec v,P)$, $(\vec w,Q)$, e $(\vec v,Q)$.
 In altre parole, applica il vettore $\vec v$ al punto $P$, il vettore $\vec w$ al punto $Q$ e il vettore $\vec v$ al punto $Q$.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/vettori-03}
+\includegraphics[width=.75\textwidth]{\pics/vettori-03}
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,15 +108,15 @@ Quindi, se abbiamo due vettori $\vec v$ e $\vec w$, la somma $\vec v+\vec w$ è 
 \end{enumerate}
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/vettori-04}
+\includegraphics[width=.75\textwidth]{\pics/vettori-04}
 \end{center}
 
 Si noti che $\vec v+\vec w$ e $\vec w+\vec v$ sono uguali!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Esercizio}
-Disegnare dei vettori e farne la somma.
-Disegnare quattro vettori $\vec v_1$, $\vec v_2$, $\vec v_3$ e $\vec v_4$ e fare la somma $\vec v_1+\vec v_2+\vec v_3+\vec v_4$.
+Disegna dei vettori e fanne la somma.
+Disegna quattro vettori $\vec v_1$, $\vec v_2$, $\vec v_3$ e $\vec v_4$ e fai la somma $\vec v_1+\vec v_2+\vec v_3+\vec v_4$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Moltiplicazione di un vettore per uno scalare}\label{par6957e5e4}
@@ -135,12 +137,12 @@ In particolare, $-\vec v$ è il vettore ``opposto'' a $\vec v$.
 Giustamente, $\vec v+(-\vec v) = 0$.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/vettori-05}
+\includegraphics[width=.75\textwidth]{\pics/vettori-05}
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Esercizio}
-Disegnare tre vettori, scegliere tre numeri, e fare almeno tre moltiplicazioni scalare per vettore.
+Disegna tre vettori, scegli tre numeri, e fai almeno tre moltiplicazioni scalare per vettore.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Vettori nel piano cartesiano}\label{par6957e126}
@@ -152,13 +154,13 @@ Possiamo descrivere ciascun vettore nel piano cartesiano usando due numeri, chia
 
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/vettori-06}
+\includegraphics[width=.75\textwidth]{\pics/vettori-06}
 \end{center}
 
 Se il vettore è applicato altrove, questi due numeri comunque determinano, data la coda del vettore, dove cadrà la punta del vettore.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/vettori-07}
+\includegraphics[width=.75\textwidth]{\pics/vettori-07}
 \end{center}
 
 
@@ -238,7 +240,7 @@ Il modulo di un vettore si può ricavare dalle coordinate usando il teorema di P
 se $\vec v=(a,b)$, allora $v=\norm{\vec v} = \sqrt{a^2 + b^2}$.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/vettori-08}
+\includegraphics[width=.75\textwidth]{\pics/vettori-08}
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -250,7 +252,7 @@ Calcola il modulo dei vettori $\vec v$, $\vec w$, $\vec u$ e $\vec k$ dall'Eserc
 Io ti do due vettori:
 \begin{equation}
 \begin{aligned}
-	\vec e_1 &= (1,0) ,\\
+	\vec e_1 &= (1,0) , &
 	\vec e_2 &= (0,1) .
 \end{aligned}
 \end{equation}
@@ -270,13 +272,13 @@ Il problema ti chiede di trovare quanto devi seguire l'uno e l'altro vettore.
 Io ti do due vettori:
 \begin{equation}
 \begin{aligned}
-	\vec v &= (2,1) ,\\
+	\vec v &= (2,1) , &
 	\vec w &= (-1,2) .
 \end{aligned}
 \end{equation}
 Trova due scalari $a,b\in\R$ tali per cui
 \begin{equation}
-	a \vec e_1 + b \vec e_2 = (5,-2) .
+	a \vec v + b \vec w = (5,-2) .
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -297,21 +299,21 @@ La scomposizione diventa interessante se sono prefissate due rette, ossia:
 Dato un vettore $\vec w$ e due rette $r$ e $s$, vogliamo trovare due vettori $\vec u$ e $\vec v$ tali che $r$ è la direzione di $\vec u$ e $s$ è la direzione di $\vec v$.
 
 \begin{center}
-\includegraphics[width=.5\textwidth]{pics/vettori-09}
+\includegraphics[width=.5\textwidth]{\pics/vettori-09}
 \end{center}
 
 Il modo geometrico di trovare questi due vettori è molto semplice.
 Prendiamo una delle due rette, per esempio $s$, e la trasliamo parallelamente alla punta di $\vec w$, così:
 
 \begin{center}
-\includegraphics[width=.5\textwidth]{pics/vettori-10}
+\includegraphics[width=.5\textwidth]{\pics/vettori-10}
 \end{center}
 
 A questo punto, $\vec u$ è il vettore che va dalla coda di $\vec w$ al punto di intersezione di $r$ e $s$ traslato, e $\vec v$ è il vettore che va da questa intersezione alla punta di $\vec w$.
 Per costruzione, abbiamo proprio che la direzione di $\vec u$ è $s$, la direzione di $\vec v$ è $\vec w$ e $\vec u + \vec v = \vec w$.
 
 \begin{center}
-\includegraphics[width=.5\textwidth]{pics/vettori-11}
+\includegraphics[width=.5\textwidth]{\pics/vettori-11}
 \end{center}
 
 Questo è un modo geometrico di fare la scomposizione.
@@ -324,7 +326,7 @@ Se $\alpha$ è l'angolo tra $\hat w$ e la retta $r$, allora
 \end{equation}
 
 \begin{center}
-\includegraphics[width=.5\textwidth]{pics/vettori-12}
+\includegraphics[width=.5\textwidth]{\pics/vettori-12}
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -332,7 +334,7 @@ Se $\alpha$ è l'angolo tra $\hat w$ e la retta $r$, allora
 Scomponi i seguenti vettori nelle due rette date.
 
 \begin{center}
-\includegraphics[width=.75\textwidth]{pics/vettori-13}
+\includegraphics[width=.75\textwidth]{\pics/vettori-13}
 \end{center}
 
 NB: In questo esercizio dovresti notare che il risultato della scomposizione dipende dalla scelta di entrambe le rette.
@@ -343,24 +345,24 @@ Per esempio, nei due casi a destra, il vettore è lo stesso e una delle due rett
 Uno dei motivi per scomporre i vettori è che aiuta a sommare i vettori.
 Supponiamo di avere due vettori $\vec v$ e $\vec w$ di cui vogliamo fare la somma.
 \begin{center}
-\includegraphics[width=.3\textwidth]{pics/vettori-14-01}
+\includegraphics[width=.3\textwidth]{\pics/vettori-14-01}
 \end{center}
 Scegliamo due rette:
 \begin{center}
-\includegraphics[width=.3\textwidth]{pics/vettori-14-02}
+\includegraphics[width=.3\textwidth]{\pics/vettori-14-02}
 \end{center}
 Scomponiamo entrambi i vettori lungo le due rette:
 \begin{center}
-\includegraphics[width=.3\textwidth]{pics/vettori-14-04}
-\includegraphics[width=.3\textwidth]{pics/vettori-14-03}
-\includegraphics[width=.3\textwidth]{pics/vettori-14-05}
+\includegraphics[width=.3\textwidth]{\pics/vettori-14-04}
+\includegraphics[width=.3\textwidth]{\pics/vettori-14-03}
+\includegraphics[width=.3\textwidth]{\pics/vettori-14-05}
 \end{center}
 Abbiamo così $\vec v = \vec v_1 + \vec v_2$ e $\vec w = \vec w_1 + \vec w_2$.
 Portiamo la nostra attenzione alle sole componenti $\vec v_1$, $\vec v_2$, $\vec w_1$ e $\vec w_2$, e sommiamo quelle lungo ciascuna retta, ossia quelle che condividono la direzione:
 \begin{center}
-\includegraphics[width=.3\textwidth]{pics/vettori-14-06}
-\includegraphics[width=.3\textwidth]{pics/vettori-14-07}
-\includegraphics[width=.3\textwidth]{pics/vettori-14-08}
+\includegraphics[width=.3\textwidth]{\pics/vettori-14-06}
+\includegraphics[width=.3\textwidth]{\pics/vettori-14-07}
+\includegraphics[width=.3\textwidth]{\pics/vettori-14-08}
 \end{center}
 Queste somme sono sì eseguite con il metodo punto-coda, ma essendo lungo la stessa retta stiamo in pratica solo sommando i moduli (con segno dato dal verso).
 Insomma, sommare vettori che hanno la stessa direzione è quasi come sommare numeri.
@@ -376,8 +378,8 @@ Algebricamente, stiamo facendo questo:
 \end{equation}
 Effettivamente, anche dal disegno vediamo che $\vec w_1 + \vec w_1$ e $\vec v_2 + \vec w_2$ sono le componenti di $\vec v + \vec w$ lungo le due rette.
 \begin{center}
-\includegraphics[width=.3\textwidth]{pics/vettori-14-09}
-\includegraphics[width=.3\textwidth]{pics/vettori-14-10}
+\includegraphics[width=.3\textwidth]{\pics/vettori-14-09}
+\includegraphics[width=.3\textwidth]{\pics/vettori-14-10}
 \end{center}
 In altre parole
 \begin{equation}\label{eq695a2590}
