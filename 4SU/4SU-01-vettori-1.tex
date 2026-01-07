@@ -1,0 +1,318 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a5paper,11pt]{amsart}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1cm,top=.5cm]{geometry}
+
+%\usepackage{cmbright}
+%\usepackage[sfdefault]{carlito}
+%\setmainfont{calibri}
+%For Japanese kanji and kana: but Typeset with XeLaTeX !
+%\usepackage{xeCJK}
+%\setCJKmainfont{MS Mincho} % for \rmfamily
+%\setCJKsansfont{MS Gothic} % for \sffamily
+\usepackage{csquotes}
+\usepackage[style=numeric,%alphabetic,%
+	useprefix,%
+	giveninits=true,%
+	hyperref,%
+	doi=false,%
+	url=false,%
+	isbn=false,%
+	backend=bibtex,%
+	maxbibnames=99%
+	]{biblatex}
+\bibliography{./BIB}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PACCHETTI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+%\usepackage[all]{xy} % For \xymatrix
+\usepackage[usenames,dvipsnames]{xcolor}
+\hypersetup{colorlinks,%
+citecolor=Black,%
+filecolor=Black,%
+linkcolor=Black,%
+urlcolor=Black}
+%\hypersetup{colorlinks,%
+%citecolor=OliveGreen,%
+%filecolor=magenta,%
+%linkcolor=RoyalBlue,%
+%urlcolor=cyan}
+%\usepackage{mparhack}	% Per correggere le note a margine, che a volte vengono dalla parte sbagliata.
+%\usepackage{todonotes} % Per le note a margine in stile Thomas Z.
+%\usepackage{comment}	% Per i commenti lunghi: \begin{comment} ... \end{comment}
+%\usepackage{marvosym}	% Per il fulmine: \Lightning
+\usepackage{enumitem}	% Per personalizzare gli elenchi
+%\usepackage{booktabs}	% Per i comandi \toprule \midrule \bottomrule , che fanno righe orrizontali nelle tabelle
+%\usepackage{array}		% Per formattare meglio le celle nelle tabelle.
+\usepackage{mathtools}	% Per \mathclap
+\mathtoolsset{showonlyrefs=true} % Per mostrare solo i numeri che servono. With Mathtools: See https://tex.stackexchange.com/questions/4728/how-do-i-number-equations-only-if-they-are-referred-to-in-the-text
+%\usepackage[pdftex]{graphicx}	% Per il frontespizio...
+%\usepackage{makeidx}	% Per fare l'indice analitico. Già in amsart, amsbook and amsproc. 
+%\makeindex
+%\allowdisplaybreaks % per avere equazioni su più pagine
+\usepackage{tikz}
+%
+%\usepackage{framed} % for the environment ``framed''. For more complicated things, use \usepackage{mdframed}.
+%\usepackage{refcheck} % Mostra i label non usati ``Unused label...'' nel log file. See https://tex.stackexchange.com/questions/209782/get-list-of-unused-labels
+\usepackage[normalem]{ulem} % for strikeout: \sout{striketouted} (preferable over 'soul')
+%\usepackage{soul} % for strikeout: \st{striketouted} (see 'ulem' package, which is preferable)
+\usepackage{siunitx} % For SI units
+\usepackage{yhmath} % for \widetriangle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COMANDI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\scr}[1]{\mathscr{#1}}
+\newcommand{\frk}[1]{\mathfrak{#1}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\cal}[1]{\mathcal{#1}}
+%
+\newcommand{\N}{\mathbb{N}}	% Numeri naturali
+\newcommand{\Z}{\mathbb{Z}}	% Numeri interi
+\newcommand{\Q}{\mathbb{Q}}	% Numeri razionali
+\newcommand{\R}{\mathbb{R}}	% Numeri reali
+\newcommand{\C}{\mathbb{C}}	% Numeri complessi
+%\newcommand{\K}{\mathbb{K}}	% Campo di numeri
+%\newcommand{\Id}{\mathrm{Id}}	% Mappa identità
+%\newcommand{\Span}{\mathrm{span}}	% Span
+%\newcommand{\Ker}{\mathrm{Ker}}	% Ker
+\newcommand{\diff}{\mathrm{d}}	% 'd' di derivata
+\newcommand{\did}{\,\mathrm{d}} % 'd' di derivata, con spazio prima, per integrale.
+\newcommand{\de}{\partial}		% Derivata parziale
+\renewcommand{\div}{\operatorname{div}}	% div di Divergenza.
+%\newcommand{\into}{\hookrightarrow}		% (->  %)
+%\newcommand{\dto}{\dashrightarrow}
+\newcommand{\ol}[1]{\overline{#1}}	% overline breve
+%\DeclareMathOperator{\arctanh}{arctanh}
+\newcommand{\IF}{\Leftarrow}	% <=
+\newcommand{\THEN}{\Rightarrow}	% =>
+\newcommand{\IFF}{\Leftrightarrow}	% <=>
+\newcommand{\ddx}{\framebox[\width]{$\Rightarrow$} }
+\newcommand{\ssx}{\framebox[\width]{$\Leftarrow$} }
+\newcommand{\ci}{\framebox[\width]{$\subset$} }
+\newcommand{\ic}{\framebox[\width]{$\supset$} }
+\newcommand{\lebox}{\framebox[\width]{$\le$} }
+\newcommand{\gebox}{\framebox[\width]{$\ge$} }
+%\renewcommand{\Re}{\operatorname{Re}}
+%\renewcommand{\Im}{\operatorname{Im}}
+% \hel is the left-lower corner for restriction of measures.
+\newcommand{\hel}
+{
+\hskip2.5pt{\vrule height6pt width.5pt depth0pt}
+\hskip-.2pt\vbox{\hrule height.5pt width6pt depth0pt}
+\,
+}
+\newcommand{\Lin}{\mathtt{Lin}}
+\newcommand{\End}{\mathtt{End}}
+\newcommand{\J}{\mathtt{J}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\Sym}{\mathtt{Sym}}
+\newcommand{\jet}{\mathfrak{j}}
+\newcommand{\Jet}{\mathtt{J}}
+\newcommand{\HorDer}{\mathtt{HD}}
+\newcommand{\bbar}[1]{\overline{\overline{#1}}}
+\newcommand{\Der}{\mathtt{Der}}
+\newcommand{\Aut}{\mathtt{Aut}}
+\newcommand{\Poly}{\scr P}
+\newcommand{\UniEnvAlg}{\scr U}
+\newcommand{\Tensor}{\scr T}
+\newcommand{\HH}{\bb H}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\w}{\mathbf{w}}
+\newcommand{\Haus}{\scr H}
+\newcommand{\dist}{\mathrm{dist}}
+\newcommand{\spt}{\mathrm{spt}}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\nnorm}[1]{\left\lvert\!\left\lvert\!\left\lvert #1 \right\rvert\!\right\rvert\!\right\rvert}
+
+\newcommand{\lcontr}{\lrcorner}
+\newcommand{\rcontr}{\raisebox{\depth}{\scalebox{1}[-1]{$\lrcorner$}}} % serve graphicx
+
+% Per \one, la mappa che vale 1
+\usepackage{dsfont}
+\newcommand{\one}{{\mathds 1\!}}
+
+% Mean integral
+\def\Xint#1{\mathchoice
+      {\XXint\displaystyle\textstyle{#1}}%
+      {\XXint\textstyle\scriptstyle{#1}}%
+      {\XXint\scriptstyle\scriptscriptstyle{#1}}%
+      {\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+      \!\int}
+   \def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$}
+        \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+%   \def\ddashint{\Xint=}
+%   \def\dashint{\Xint-}
+   \def\fint{\Xint-}
+  
+\newcommand{\sen}{\operatorname{sen}}
+\newcommand{\parallelo}{{/\!\!/}}
+\newcommand{\pics}{../pics} % cartella delle immagini
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TEOREMI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}[proposition]{Theorem}
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem{corollary}[proposition]{Corollary}
+\newtheorem{thm}{Theorem}[section]
+\renewcommand{\thethm}{\Alph{thm}}
+%\newtheorem{question}{Question}
+
+\theoremstyle{definition}
+\newtheorem{definition}[proposition]{Definition}
+\newtheorem{remark}[proposition]{Remark}
+%\declaretheorem[name=Remark,sibling=proposition,qed={\lower-0.3ex\hbox{$\blacklozenge$}}]{remark} % but with \usepackage{thmtools}
+
+\theoremstyle{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Subsectioning for notes:
+%\renewcommand{\thesubsection}{{\bf\S\arabic{section}.\arabic{subsection}}}
+\renewcommand{\thesubsection}{{\bf\arabic{subsection}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{I vettori (4SU) -- 1}
+%\author[Nicolussi Golo]{Sebastiano Nicolussi Golo}
+%\date{\today}
+\date{\today. \IfFileExists{./.gittex}{\input{./.gittex}}{}}
+
+\begin{document}
+\maketitle
+\vspace{-.5cm}
+\begin{tabular}{lp{2cm}lp{6cm}}
+Classe: & \dotfill & Nome: & \dotfill \\
+Data: & \dotfill & Cognome: & \dotfill 
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Riscaldamento}
+\makebox{}
+
+\begin{minipage}[b]{.5\textwidth}
+\begin{itemize}[leftmargin=*]
+\item $43+74-29 =$
+\item $\frac{11}{6} + \frac{7}{4} =$
+\end{itemize}
+\end{minipage}
+\begin{minipage}[b]{.5\textwidth}
+\begin{itemize}[leftmargin=*]
+\item $2(x+3)+x =$
+\item $\frac{x(2+y)-2x}{y} =$
+\end{itemize}
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{.5cm}
+\noindent
+\begin{minipage}{.5\textwidth}
+\subsection{Esercizio}\label{par6957d6fa}
+Tra i seguenti vettori:
+\begin{itemize}
+\item	quali hanno la stessa direzione?
+\item	quali hanno la stessa direzione e lo stesso verso?
+\item	quali hanno lo stesso modulo?
+\end{itemize}
+
+Quindi, quali delle seguenti frecce sono lo stesso vettore?
+\end{minipage}
+\begin{minipage}[c]{.5\textwidth}
+\begin{center}
+\includegraphics[width=.75\textwidth]{\pics/vettori-02}
+\end{center}
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{.5cm}
+\noindent
+\begin{minipage}{.5\textwidth}
+\subsection{Esercizio}\label{par695d1f91}
+Abbiamo tre vettori, che chiamiamo $\vec v$, $\vec w$ e $\vec z$, e due punti che chiamiamo $P$ e $Q$.
+Disegna i vettori applicati $(\vec v,P)$, $(\vec w,Q)$, e $(\vec v,Q)$.
+In altre parole, applica il vettore $\vec v$ al punto $P$, il vettore $\vec w$ al punto $Q$ e il vettore $\vec v$ al punto $Q$.
+\end{minipage}
+\begin{minipage}[c]{.5\textwidth}
+\begin{center}
+\includegraphics[width=.5\textwidth]{\pics/vettori-03}
+\end{center}
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{.5cm}
+\subsection{Esercizio}\label{par695d1ef4}
+Disegna due vettori e fanne la somma.
+Disegna quattro vettori $\vec v_1$, $\vec v_2$, $\vec v_3$ e $\vec v_4$ e fai la somma $\vec v_1+\vec v_2+\vec v_3+\vec v_4$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{.5cm}
+\subsection{Esercizio}\label{par695d1f0c}
+Disegna tre vettori, scegli tre numeri, e fai almeno tre moltiplicazioni scalare per vettore.
+Di due vettori $\vec v$ e $\vec w$, calcola graficamente $\vec v-\vec w$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{.5cm}
+%\subsection{Esercizio}\label{par695d1f14}
+%Disegna due vettori $\vec v$ e $\vec w$, e calcola graficamente $\vec v-\vec w$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}\label{par6957e1d8}
+Disegna i vettori con le seguenti coordinate:
+$\vec v=(1,1)$, $\vec w=(1,-2)$, $\vec z=(-2,0)$, $\vec k=(-1,-1)$.
+Poi, disegna tu tre vettori e determinane le coordinate.
+%Poi ancora, disegna i vettori $\vec v$, $\vec w$, $\vec u$ e $\vec k$ applicati al punto $P=(2,3)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Rifai gli Esercizi~\ref{par695d1f91}, \ref{par695d1ef4}, \ref{par695d1f0c}, in coordinate.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Esercizio}
+%Disegna i vettori $\vec v$, $\vec w$, $\vec u$ e $\vec k$ dall'Esercizio~\ref{par6957e1d8} applicati al punto $P=(2,3)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Esercizio}
+%Si prendano i vettori dall'Esercizio~\ref{par6957e1d8} e si facciano almeno tre somme.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Esercizio}
+%Si prendano tre numeri reali e tre vettori in coordinate e si facciano almeno tre moltiplicazioni scalare per vettore.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{.5cm}
+\subsection{Defaticamento}
+\makebox{}
+
+\begin{minipage}[b]{.5\textwidth}
+\begin{itemize}[leftmargin=*]
+\item	$a-b(a-b)-(a-b)^2 =$
+\item	$\frac1a + \frac1b = $
+\item	$a^x a^y =$
+\end{itemize}
+\end{minipage}
+\begin{minipage}[b]{.5\textwidth}
+\begin{itemize}[leftmargin=*]
+\item	$(a+b)(a-b) =$
+\item	$\frac{32}{3^2 2^3} + \frac{27}{3^3 2} =$
+\item	$2^a 4^b =$
+\end{itemize}
+\end{minipage}
+
+
+\end{document}

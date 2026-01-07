@@ -1,0 +1,168 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a5paper,11pt]{amsart}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1cm,top=.5cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PACCHETTI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+%\usepackage[all]{xy} % For \xymatrix
+\usepackage[usenames,dvipsnames]{xcolor}
+\hypersetup{colorlinks,%
+citecolor=Black,%
+filecolor=Black,%
+linkcolor=Black,%
+urlcolor=Black}
+%\usepackage{marvosym}	% Per il fulmine: \Lightning
+\usepackage{enumitem}	% Per personalizzare gli elenchi
+%\usepackage{booktabs}	% Per i comandi \toprule \midrule \bottomrule , che fanno righe orrizontali nelle tabelle
+%\usepackage{array}		% Per formattare meglio le celle nelle tabelle.
+\usepackage{mathtools}	% Per \mathclap
+\mathtoolsset{showonlyrefs=true} % Per mostrare solo i numeri che servono. With Mathtools: See https://tex.stackexchange.com/questions/4728/how-do-i-number-equations-only-if-they-are-referred-to-in-the-text
+%\usepackage[pdftex]{graphicx}	% Per il frontespizio...
+%\usepackage{makeidx}	% Per fare l'indice analitico. Già in amsart, amsbook and amsproc. 
+%\makeindex
+%\allowdisplaybreaks % per avere equazioni su più pagine
+\usepackage{tikz}
+%
+%\usepackage{framed} % for the environment ``framed''. For more complicated things, use \usepackage{mdframed}.
+%\usepackage{refcheck} % Mostra i label non usati ``Unused label...'' nel log file. See https://tex.stackexchange.com/questions/209782/get-list-of-unused-labels
+\usepackage[normalem]{ulem} % for strikeout: \sout{striketouted} (preferable over 'soul')
+%\usepackage{soul} % for strikeout: \st{striketouted} (see 'ulem' package, which is preferable)
+\usepackage{siunitx} % For SI units
+\usepackage{yhmath} % for \widetriangle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COMANDI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\scr}[1]{\mathscr{#1}}
+\newcommand{\frk}[1]{\mathfrak{#1}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\cal}[1]{\mathcal{#1}}
+%
+\newcommand{\N}{\mathbb{N}}	% Numeri naturali
+\newcommand{\Z}{\mathbb{Z}}	% Numeri interi
+\newcommand{\Q}{\mathbb{Q}}	% Numeri razionali
+\newcommand{\R}{\mathbb{R}}	% Numeri reali
+  
+\newcommand{\sen}{\operatorname{sen}}
+\newcommand{\parallelo}{{/\!\!/}}
+\newcommand{\pics}{../pics} % cartella delle immagini
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Subsectioning for notes:
+%\renewcommand{\thesubsection}{{\bf\S\arabic{section}.\arabic{subsection}}}
+\renewcommand{\thesubsection}{{\bf\arabic{subsection}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{I vettori (4SU) -- 2}
+\date{\today. \IfFileExists{./.gittex}{\input{./.gittex}}{}}
+
+\begin{document}
+\maketitle
+\vspace{-.5cm}
+\begin{tabular}{lp{2cm}lp{6cm}}
+Classe: & \dotfill & Nome: & \dotfill \\
+Data: & \dotfill & Cognome: & \dotfill 
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Riscaldamento}
+\makebox{}
+
+\begin{minipage}[b]{.5\textwidth}
+\begin{itemize}[leftmargin=*]
+\item $34 + 21 - 18 =$
+\item $\frac{22}{11} + \frac{3}{22} =$
+\end{itemize}
+\end{minipage}
+\begin{minipage}[b]{.5\textwidth}
+\begin{itemize}[leftmargin=*]
+\item $(x+y)(x-y) =$
+\item $\frac{x^2+2xy+y^2}{x^2-y^2} =$
+\end{itemize}
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Esercizio}\label{par6957e1d8}
+%Disegna i vettori con le seguenti coordinate:
+%$\vec v=(1,1)$, $\vec w=(0,3)$, $\vec u=(2,-1)$, $\vec k=(-1,-1)$.
+%
+%Poi, disegna tu tre vettori e determinane le coordinate.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Esercizio}
+%Disegna i vettori $\vec v$, $\vec w$, $\vec u$ e $\vec k$ dall'Esercizio~\ref{par6957e1d8} applicati al punto $P=(2,3)$.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Esercizio}
+%Si prendano i vettori dall'Esercizio~\ref{par6957e1d8} e si facciano almeno tre somme, sia con il disegno che con le coordinate.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Esercizio}
+%Si prendano tre numeri reali e tre vettori in coordinate e si facciano almeno tre moltiplicazioni scalare per vettore.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}\label{par695d2163}
+Disegna i seguenti vettori e calcolane il modulo:
+$\vec v=(1,1)$, $\vec w=(0,3)$, $\vec u=(2,-1)$, $\vec k=(-1,-1)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}\label{par695d1af2}
+Io ti do due vettori:
+\begin{equation}
+\begin{aligned}
+	\vec e_1 &= (1,0) , &
+	\vec e_2 &= (0,1) .
+\end{aligned}
+\end{equation}
+Trova due scalari $a,b\in\R$ tali per cui
+\begin{equation}
+	a \vec e_1 + b \vec e_2 = (4,-5) .
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Io ti do due vettori:
+\begin{equation}
+\begin{aligned}
+	\vec v &= (2,1) , &
+	\vec w &= (-1,2) .
+\end{aligned}
+\end{equation}
+Trova due scalari $a,b\in\R$ tali per cui
+\begin{equation}
+	a \vec v + b \vec w = (5,-2) .
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Supponi che $\vec v$ sia un vettore non nullo.
+Trova $t\in\R$ e un versore $\hat u$ tale che $\vec v = t \hat u$.
+
+Scrivi i quattro vettori dell'Esercizio~\ref{par695d2163} come ``scalare per versore''.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Considera i due vettori $\vec e_1$ e $\vec e_2$ dell'Esercizio~\ref{par695d1af2}.
+Sono dei versori?
+
+Per quali $a\in\R$ e $b\in\R$ il vettore $a\vec e_1 + b\vec e_2$ è un versore?
+Fai un disegno di tutti questi versori nel piano cartesiano.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
