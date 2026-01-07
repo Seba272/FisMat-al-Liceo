@@ -1,0 +1,194 @@
+% !TEX encoding = UTF-8 Unicode
+%!TEX root = FisMat.tex
+
+\section{Calcolo Simbolico}
+
+\subsection{Fa qualcosa:}
+
+
+\begin{enumerate}
+\item
+$a+a = $
+\item
+$a-a = $
+\item
+$a+\frac1a = $
+\item
+$a+b-a = $
+\item
+$a+2b+a = $
+\item
+$a+2(a+b) = $
+\item
+$(a+b) - a - b = $
+\item
+$a+b+b+a = $
+\item
+$a+b+b-a = $
+\item
+$(a+b)c = $
+\item
+$a(b+c) = $
+\item
+$c(a+b) = $
+\item
+$(a+b)c - c(a+b) = $
+\item
+$(a+b)(c+d) = $
+\item
+$(a+b) (x+2y) = $
+\item
+$(a+b) (a+b) = $
+\item
+$(a+b)^2 = $
+\item
+$(a+b)(a-b) = $
+\item
+$(a-b)(a-b) = $
+\item
+$(x-y)(x+y) = $
+\item
+$(x-y)^2 = $
+\item
+$(a+x)^3 = $
+\item
+$(a-x)^3 = $
+\item
+$(a+1)^2 = $
+\item
+$a^2-1 = $
+\item
+$a+b(a+b)-(a+b)^2 =$
+\item
+$a-b(a-b)-(a-b)^2 =$
+\item
+$a^2-(a+b)a = $
+\item
+$(x+x^2-2)y = $
+\item
+$x(x+1)-x^2 = $
+\item
+$R^2+(r-R)^2+2rR = $
+\item
+$\sqrt{a^2} = $
+\item
+$a(x-b)^2+2abx = $
+\item
+$a\frac1b = $
+\item
+$\frac1a + \frac1b = $
+\item
+$\frac{a+b}{c} = $
+\item
+$\frac{ab+b}{b} = $
+\item
+$\frac{a}{b} + c = $
+\item
+$\frac{a+1}{a} = $
+\item
+$\frac{a}{a+b} - 1 = $
+\item
+$\frac{x^2-y^2}{x^2+2xy+y^2} = $
+\item
+$\frac{y}{x+1}+\frac{x+1}{y} = $
+\item
+$\frac{a+a^2}{a}-1 = $
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Espandi}
+Espandere un'espressione algebrica significa scriverla come somma di termini semplici.
+Per esempio, $(x+2)(x+1)+x3y$ si espande (e semplifica) a $x^2+3xy+3x+2$.
+I termini semplici qui sono $x^2$, $3xy$, $3x$, e $2$.
+
+\begin{enumerate}
+\item	$(x+2)(x+1)+x3y$
+\item	$(a+b)^2$
+\item	$2x(a-2b)^2$
+\item	$(a+b)(a-b)$
+\item	$x(a+b)-y(a-b)+2xy$
+\item	$a(a+b)-b(a-b)+2ab$
+\item	$2(x+b)(a+y)-2(xy+ab)$
+\item	$4x(a+b)(x-y^2)$
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esplicita}
+Se abbiamo una equazione possiamo cercare di esplicitare una variabile.
+Per esempio, se abbiamo l'equazione 
+\begin{equation}\label{eq695cd2e5}
+	-4x+a^2(x+2)=a^2-1 ,
+\end{equation}
+possiamo esplicitare $x$:
+\begin{equation}\label{eq695cd2f5}
+	x=-\frac{1+a^2}{a^2-4} .
+\end{equation}
+Questo passaggio non è immediato, ma servono alcuni passaggi intermedi che ti invito a fare su un foglio.
+
+È importante imparare a fare questi passaggi in modo naturale.
+È anche importante imparare le sottigliezze di questi passaggi, perché ogni passaggio necessita di alcune condizioni.
+Per esempio, nell'espressione che ho scritto per $x$, c'è $a^2-4$ al denominatore.
+Siccome non abbiamo condizioni sui valori di $a$, dobbiamo prendere in considerazione il caso in cui $a$ ha un valore per il quale $a^2-4=0$.
+Per esempio, $a$ potrebbe assumere i valori 2 o $-2$.
+In questo caso, l'espressione che ho scritto per $x$ non ha più senso: stiamo dividendo per zero.
+Come è possibile che da una espressione senza condizioni come l'equazione~\eqref{eq695cd2e5}
+siamo arrivati a una equazione con condizioni come in~\eqref{eq695cd2f5}?
+La risposta è: c'è stato almeno un passaggio in cui abbiamo usato quella condizioni.
+
+Vediamo quindi come si passa da~\eqref{eq695cd2e5} a~\eqref{eq695cd2f5}.
+A lato do una giustificazione del passaggio.
+La sigla ``PADC'' sta per ``proprietà associativa, distributiva, commutativa'' e si riferisce alle proprietà elementari di somma e moltiplicazioni.
+La sigla ``e.l.'' sta per ``entrambi i lati dell'equazione''
+\begin{align}
+	&-4x+a^2(x+2)=a^2-1 \\
+	\IFF & (-4+a^2)x + 2a^2 = a^2-1 \qquad(\text{per PADC}) \\
+	\IFF & (-4+a^2)x = a^2-1 - 2a^2 \qquad(\text{aggiungo $- 2a^2$ a e.l.}) \\
+	\IFF & (-4+a^2)x = -(1 + a^2) \qquad(\text{per PADC}) \\
+%	\IFF & x = -\frac{1+a^2}{a^2-4} && \text{divido per $a^2-4$, SE diverso da zero} \\
+	\IFF & 
+	\begin{cases}
+		x = -\frac{1+a^2}{a^2-4} & \text{divido per $a^2-4$ a e.l., SE diverso da zero,} \\
+		1 + a^2 = 0 & \text{SE $a^2-4=0$.}
+	\end{cases}
+\end{align}
+Questo è quindi il vero risultato.
+Nel caso in cui $a^2-4=0$, allora $1+a^2 = 1+a^2+(4-4) = 1+(a^2-4)+4 = 5$ e quindi $1 + a^2 = 0$ è falso.
+In altre parole, se $a^2-4=0$, allora~\eqref{eq695cd2e5} è falsa per qualunque valore di $x$.
+In conclusione
+\begin{equation}
+	-4x+a^2(x+2)=a^2-1
+	\quad\IFF\quad
+	a^2-4\neq0, \text{ e }x = -\frac{1+a^2}{a^2-4} .
+\end{equation}
+
+In ogni passaggio, le operazioni che possiamo compiere sono:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Operazione & Condizioni \\
+\hline
+PADC & nessuna \\
+Aggiungere {\it qlcs} a e.l. & nessuna \\
+Moltiplicare {\it qlcs} a e.l. & {\it qlcs} deve essere non zero \\
+Dividere per {\it qlcs} a e.l. & {\it qlcs} deve essere non zero \\
+\hline
+\end{tabular}
+\end{center}
+
+Esercizi:
+\begin{enumerate}
+\item	Esplicita $x$ in $x+2=0$
+\item	Esplicita $x$ in $x+2=a$
+\item	Esplicita $x$ in $x+a=b$
+\item	Esplicita $a$ in $x+a=b$
+\item	Esplicita $x$ in $(x+2)b=c$
+\end{enumerate}
+
+
+
+
+
+
+
+
