@@ -1,0 +1,257 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a5paper,11pt,twopages]{amsart}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[margin=1cm,top=1cm,right=1.5cm]{geometry}
+\usepackage[a5paper, twoside, margin=1cm, inner=1.5cm, outer=1cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PACCHETTI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+%\usepackage[all]{xy} % For \xymatrix
+\usepackage[usenames,dvipsnames]{xcolor}
+\hypersetup{colorlinks,%
+citecolor=Black,%
+filecolor=Black,%
+linkcolor=Black,%
+urlcolor=Black}
+%\usepackage{marvosym}	% Per il fulmine: \Lightning
+\usepackage{enumitem}	% Per personalizzare gli elenchi
+%\usepackage{booktabs}	% Per i comandi \toprule \midrule \bottomrule , che fanno righe orrizontali nelle tabelle
+%\usepackage{array}		% Per formattare meglio le celle nelle tabelle.
+\usepackage{mathtools}	% Per \mathclap
+\mathtoolsset{showonlyrefs=true} % Per mostrare solo i numeri che servono. With Mathtools: See https://tex.stackexchange.com/questions/4728/how-do-i-number-equations-only-if-they-are-referred-to-in-the-text
+%\usepackage[pdftex]{graphicx}	% Per il frontespizio...
+%\usepackage{makeidx}	% Per fare l'indice analitico. Già in amsart, amsbook and amsproc. 
+%\makeindex
+%\allowdisplaybreaks % per avere equazioni su più pagine
+\usepackage{tikz}
+%
+%\usepackage{framed} % for the environment ``framed''. For more complicated things, use \usepackage{mdframed}.
+%\usepackage{refcheck} % Mostra i label non usati ``Unused label...'' nel log file. See https://tex.stackexchange.com/questions/209782/get-list-of-unused-labels
+\usepackage[normalem]{ulem} % for strikeout: \sout{striketouted} (preferable over 'soul')
+%\usepackage{soul} % for strikeout: \st{striketouted} (see 'ulem' package, which is preferable)
+\usepackage{siunitx} % For SI units
+\usepackage{yhmath} % for \widetriangle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COMANDI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\scr}[1]{\mathscr{#1}}
+\newcommand{\frk}[1]{\mathfrak{#1}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\cal}[1]{\mathcal{#1}}
+%
+\newcommand{\N}{\mathbb{N}}	% Numeri naturali
+\newcommand{\Z}{\mathbb{Z}}	% Numeri interi
+\newcommand{\Q}{\mathbb{Q}}	% Numeri razionali
+\newcommand{\R}{\mathbb{R}}	% Numeri reali
+  
+\newcommand{\sen}{\operatorname{sen}}
+\newcommand{\parallelo}{{/\!\!/}}
+\newcommand{\pics}{../pics} % cartella delle immagini
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Subsectioning for notes:
+%\renewcommand{\thesubsection}{{\bf\S\arabic{section}.\arabic{subsection}}}
+\renewcommand{\thesubsection}{{\bf\arabic{subsection}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{La Legge Di Hooke (3SU)}
+\date{\today. \IfFileExists{../.gittex}{\input{../.gittex}}{}}
+
+\begin{document}
+%\maketitle
+\vspace{-.5cm}
+\begin{center}
+{\bf LA LEGGE DI HOOKE (3SU)}
+\end{center}
+
+%\vspace{-.5cm}
+\begin{tabular}{lp{2cm}lp{6cm}}
+Classe: & \dotfill & Nome: & \dotfill \\
+Data: & \dotfill & Cognome: & \dotfill 
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Riscaldamento}
+\makebox{}
+
+\begin{minipage}[b]{.5\textwidth}
+\begin{itemize}[leftmargin=*]
+\item $22 - 34 + 81 =$
+\item $\frac{4}{7} - \frac{2}{35} =$
+\end{itemize}
+\end{minipage}
+\begin{minipage}[b]{.5\textwidth}
+\begin{itemize}[leftmargin=*]
+\item $(a-b)(a+b) =$
+\item $\frac{ (x-1)^2 - 1 }{ x } =$
+\end{itemize}
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Nei seguenti disegni, sono rappresentate delle molle sia a riposo che sotto sforzo.
+Nelle immagini delle molle sotto sforzo, disegna gli scarti $\Delta \vec x$ e le forze elastiche $\vec F$ date dalla legge di Hooke.
+
+\begin{center}
+\boxed{\includegraphics[width=.20\textwidth]{\pics/statica-07}}
+\boxed{\includegraphics[width=.32\textwidth]{\pics/statica-08}}
+\boxed{\includegraphics[width=.40\textwidth]{\pics/statica-09}}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Una molla di costante elastica $k=34\unit{N/m}$ e di lunghezza a riposo $\ell=45\unit{cm}$ è dentro una scatola lunga $30\unit{cm}$.
+Quali sono le forze impresse dalla molla sulle due pareti della scatola?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Appendo un corpo di massa $m=13\unit{g}$ a una molla con costante elastica $k=50\unit{N/m}$, che a sua volta è appesa al soffitto.
+La molla a riposo è lunga $\ell = 7\unit{cm}$.
+Quanto è lunga la molla quando il corpo è appeso?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}\label{par6958e97f}
+Lucia e Marco hanno costruito una bilancia casalinga.
+Hanno messo una molla in verticale (un tubo la tiene dritta).
+In basso la molla appoggia al tavolo, in alto invece c'è una piano su cui appoggiare gli oggetti da pesare.
+
+\begin{enumerate}[label=(\alph*)]
+\item
+Lucia e Marco devono innanzitutto calcolare la costante elastica della molla.
+Come fanno? 
+(Discutiamo la risposta in classe.)
+%\item
+%Quanto vale la costante elastica $k$ della molla?
+\item
+Trovata la costante elastica $k$ della molla, possono provare a pesare un libro di massa $M$ (sconosciuta).
+Lo appoggiano sulla bilancia e misurano che la molla si contrae di $3{,}4\unit{cm}$.
+Quanto pesa il libro? Quanto vale $M$?
+\end{enumerate}
+
+
+
+%\begin{center}
+%\includegraphics[width=.45\textwidth]{\pics/statica-10}
+%\includegraphics[width=.45\textwidth]{\pics/statica-11}
+%\end{center}
+
+%Sì, fanno così: ci appoggiano sopra un corpo di massa $m=100\unit{g}$ e misurano quanto la molla si contrae.
+%La loro misura da $\Delta x = 1\unit{cm}$.
+%[...] 
+%Quanto vale la costante elastica $k$ della molla?
+%
+%A questo punto possono provare a pesare un libro di massa $M$ (sconosciuta).
+%Lo appoggiano sulla bilancia e misurano che la molla si contrae di $3{,}4\unit{cm}$.
+%Quanto pesa il libro? Quanto vale $M$?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Due molle identiche sono messe dentro a una scatola.
+La loro costante elastica è $k$ e la loro lunghezza a riposo è $\ell$.
+La scatola è lunga $L$ e larga $H$
+($k=60\unit{N/m}$, $\ell = 10\unit{cm}$,
+$L=15\unit{cm}$, $H=8\unit{cm}$).
+
+Possiamo mettere le due molle in due modi: in serie per il lungo o in parallelo per il largo.
+\begin{enumerate}[label=(\alph*)]
+\item
+Se le mettiamo in serie per il lungo, quali forze esercitano le molle sulle pareti della scatola?
+\item
+E se le mettiamo in parallelo per il largo?
+\end{enumerate}
+
+
+\begin{center}
+\includegraphics[width=.8\textwidth]{\pics/statica-12}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[b]{.5\textwidth}
+\subsection{Esercizio}
+Torniamo alla bilancia descritta in~\ref{par6958e97f}.
+Tra Lucia e Marco nasce una diatriba.
+Lucia sostiene che dentro al tubo ci siano due molle, una sopra l'altra, identiche tra loro.
+Marco invece sostiene che ci sia una sola molla.
+\end{minipage}
+\begin{minipage}[t]{.5\textwidth}
+\begin{center}
+\includegraphics[width=.9\textwidth]{\pics/statica-13}
+\end{center}
+\end{minipage}
+\vspace{-.5cm}
+\begin{enumerate}[label=(\alph*)]
+\item
+Se avesse ragione Lucia, quale sarebbe la costante elastica delle due molle?
+\item
+C'è un modo, senza aprire il tubo che contiene le molle, di verificare chi dei due ha ragione?
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Due molle di costante elastica $k_1$ e $k_2$ rispettivamente, e di lunghezze a riposo $\ell_1$ e $\ell_2$, rispettivamente, sono appese una dopo l'altra al soffitto, in serie.
+Alla seconda molla, più in basso, viene agganciata una massa $m$.
+Quanto saranno lunghe le due molle?
+
+%\begin{center}
+%\includegraphics[width=.5\textwidth]{\pics/statica-16}
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Esercizio}
+%Due molle di costante elastica $k_1$ e $k_2$ rispettivamente, e di lunghezze a riposo $\ell_1$ e $\ell_2$, rispettivamente, sono appese a fianco l'altra al soffitto, in parallelo.
+%Viene agganciata una massa $m$ alle due
+%Quanto saranno lunghe le due molle?
+%
+%\begin{center}
+%\includegraphics[width=.75\textwidth]{\pics/statica-16}
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Esercizio}
+Inventa tu un esercizio e risolvilo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Defaticamento}
+\newcommand{\mymod}{\mathrm{mod}\ }
+\makebox{}\\
+
+\begin{minipage}[b]{.5\textwidth}
+\begin{itemize}[leftmargin=*]
+\item $122 \cdot 37 - 199 =$
+\item $\frac{x}{11} + \frac{11}{x} =$
+\item $\log_{10}(100) =$
+\item $11 + 2 \equiv ... \ (\mymod 12)$
+\item $5 + 8 \equiv ... \ (\mymod 12)$
+\item $5 + 8 \equiv ... \ (\mymod 2)$
+\end{itemize}
+\end{minipage}
+\begin{minipage}[b]{.5\textwidth}
+\begin{itemize}[leftmargin=*]
+\item $( 5(x+1)^3 - 1 ) \cdot x^{-1} =$
+\item $\frac{a}{b} - \frac{b}{a} =$
+\item $a^x \cdot a^y =$
+\item $(a^{x+y} a^{-y})^c=$
+\item $\lim_{n\to\infty} \frac1n =$
+\end{itemize}
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
